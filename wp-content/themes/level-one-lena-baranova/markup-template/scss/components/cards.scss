@@ -1,0 +1,120 @@
+.cards {
+	display: flex;
+	justify-content: space-between;
+}
+
+.card {
+	$circleSize: 60px;
+	width: 220px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&-picture {
+		margin: 20px;
+		width: 220px;
+		height: 220px;
+		border: 0.5px solid #959595;
+	}
+
+	&-name {
+		height: 35px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		margin-bottom: 15px;
+
+		font-size: 16px;
+		line-height: 1.3;
+		font-weight: 400;
+		font-style: normal;
+	}
+
+	&-prices {
+		width: 200px;
+		display: flex;
+	  justify-content: space-between;
+	}
+
+	&-circle {
+		width: $circleSize;
+		height: $circleSize;
+		border-radius: 50%;
+		line-height: $circleSize;
+		font-size: 18px;
+
+		&.small {
+			font-size: 16px;
+		}
+	}
+
+	& sup {
+		font-size: 12px;
+	}
+
+	&-retail {
+		color: #7d7d7d;
+		text-decoration: line-through;
+		background-color: #fff;
+
+		&.colored {
+			background-color: #ebebeb;
+		}
+	}
+
+	&-price {
+		color: #7d7d7d;
+		background-color: #fad482;
+	}
+
+	&-member {
+		color: #fff;
+		background-color: #84d5d8;
+	}
+}
+
+.price {
+
+	&-types {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&-type {
+		margin-top: 7px;
+		color: #7d7d7d;
+		font-size: 10px;
+		text-transform: uppercase;
+	}
+}
+
+.buy {
+	margin-top: 20px;
+	width: 100%;
+	height: 40px;
+
+	font-family: "Lato-Semibold", sans-serif;
+	font-size: 16px;
+	letter-spacing: 0.32px;
+	text-transform: uppercase;
+
+	color: #fff;
+	border-radius: 20px;
+	background-color: #8dc63f;
+	border: none;
+}
+
+.wishlist {
+	margin-top: 12px;
+
+	font-family: "Lato-Semibold", sans-serif;
+	font-size: 12px;
+	letter-spacing: 0.24px;
+	text-transform: uppercase;
+
+	color: #0072bc;
+	background-color: transparent;
+	border: none;
+}

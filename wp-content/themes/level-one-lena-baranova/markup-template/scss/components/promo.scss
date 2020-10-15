@@ -1,0 +1,111 @@
+.promo {
+	background-image: url("../img/Girl_Hero.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 1029px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.phrase {
+	$phraseSize: 221px;
+	width: $phraseSize;
+	height: $phraseSize;
+	position: relative;
+	top: 146px;
+	left: 45%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(253, 227, 137, 0.6);
+	border-radius: 50%;
+
+
+	&-pic {
+		width: 145px;
+		height: 128px;
+	}
+}
+
+.advertisements {
+	position: absolute;
+	bottom: 0;
+
+	background-color: rgba(255, 255, 255, 0.7);
+	width: 100%;
+
+	&-container {
+		display: flex;
+		align-items: center;
+	}
+}
+
+.advertisement {
+	width: 320px;
+	margin: 38px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #fff;
+	line-height: 1;
+
+	&-name {
+		margin-top: 11px;
+		font-family: "Patua One", cursive;
+		font-size: 24px;
+		letter-spacing: -0.48px;
+	}
+
+	&-blog {
+		background-color: rgba(33, 128, 178, 0.4);
+	}
+
+	&-member {
+		margin-left: 18px;
+		margin-right: 18px;
+		background-color: rgba(17, 17, 17, 0.4);
+	}
+
+	&-aroma {
+		background-color: rgba(81, 118, 30, 0.5);
+	}
+}
+
+.appeal {
+	margin-top: 23px;
+	text-transform: uppercase;
+}
+
+.blog-pic {
+	width: 96px;
+	height: 65px;
+	margin-top: 12px;
+}
+
+.blog-website {
+	display: block;
+	margin-top: 13px;
+	margin-bottom: 15px;
+	font-family: "Lato-Semibold", sans-serif;
+	color: #fff;
+}
+
+.member-card {
+	width: 114px;
+	height: 74px;
+	margin-top: 12px;
+}
+
+.member-link {
+	margin-top: 5px;
+	margin-bottom: 14px;
+	font-family: "Lato-Semibold", sans-serif;
+	color: #fff;
+}
+
+.aroma-pic {
+	width: 192px;
+	height: 86px;
+	margin-top: 13px;
+	margin-bottom: 19px;
+}

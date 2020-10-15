@@ -1,0 +1,30 @@
+.gallery {
+	display: flex;
+}
+
+.pictures {
+	margin-right: 36px;
+	display: flex;
+	flex-direction: column;
+}
+
+.picture {
+
+	&-small {
+		width: 80px;
+		height: 80px;
+
+		margin-bottom: 8px;
+
+		border: 1px solid #b7b7b7;
+
+		&.current {
+			border: 3px solid #b7b7b7;
+		}
+	}
+
+	&-main {
+		width: 444px;
+		height: 444px;
+	}
+}

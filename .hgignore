@@ -1,0 +1,10 @@
+syntax: glob
+._
+.DS_Store
+node_modules
+.htaccess
+*.log
+source
+markup-template/tips.scss
+markup-template/build
+markup-template/package-lock.json

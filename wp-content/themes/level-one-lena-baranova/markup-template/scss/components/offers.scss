@@ -1,0 +1,26 @@
+.offers {
+	background-color: #f9f9f9;
+	padding: 54px 0 70px;
+	text-align: center;
+
+	&-heading {
+		margin-bottom: 32px;
+		position: relative;
+		font-family: "Patua One", cursive;
+		font-size: 24px;
+		color: #7d7d7d;
+		text-align: center;
+		letter-spacing: 0.48px;
+
+		&:after {
+			content: "";
+			$stripWidth: 166px;
+			width: $stripWidth;
+			height: 1px;
+			position: absolute;
+			bottom: -11px;
+			left: calc(50% - #{$stripWidth / 2});
+			background-color: #fad482;
+		}
+	}
+}

@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, width=device-width, height=device-height, viewport-fit=cover">
+	<link media="all" rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	<title>Life science</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="tools">
+				<div class="container">
+					<div class="tools-set">
+						<button class="login" type="button">Sign In</button>
+						<div class="country">
+							<img class="flag" src="assets/img/US_flag_icon.png" alt="flag" srcset="assets/img/US_flag_icon@2x.png 2x">
+							<select name="country" class="countries">
+								<option value="United States" selected>
+									<p class="country-name">United States</p>
+								</option>
+								<option value>
+									<p class="country-name">United States</p>
+								</option>
+							</select>
+							<img class="arrow" src="assets/img/arrow.png" alt="arrow" srcset="assets/img/arrow@2x.png 2x">
+						</div>
+						<button class="cart">
+							<img class="cart-icon" src="assets/img/cart.png" alt="cart" srcset="assets/img/cart@2x.png 2x">
+							<div class="cart-count">1</div>
+						</button>
+					</div>
+				</div>
+			</div>
+		
+			<div class="panel">
+				<div class="container">
+					<div class="logotype">
+						<a href="#">
+							<img class="logo" src="assets/img/LSP_logo.png" alt="Life science" srcset="assets/img/LSP_logo@2x.png 2x">
+						</a>
+						<div class="slogan">
+							<p class="slogan-simple">Your Oils</p>
+							<p class="slogan-emphasized">Our tools!</p>
+						</div>
+					</div>
+					<div class="search">
+						<form action class="search-form">
+							<input class="search-input" type="search" placeholder="Search">
+							<button type="submit" class="btn-loupe">
+								<i class="fas fa-search"></i>
+							</button>
+						</form>
+						<a href="tel:1.800.336.6308" class="phone">1.800.336.6308</a>
+					</div>
+				</div>
+			</div>
+		
+			<!-- <div class="container">
+				<nav class="nav">
+					<ul class="menu">
+						<li class="menu-item">
+							<a href="" class="menu-link">Home</a>
+						</li>
+						<li class="menu-item">
+							<a href="" class="menu-link">Blowout sale</a>
+						</li>
+						<li class="menu-item">
+							<a href="" class="menu-link">Lifestyle</a>
+						</li>
+						<li class="menu-item">
+							<a href="" class="menu-link">Books</a>
+						</li>
+						<li class="menu-item">
+							<a href="" class="menu-link">Best sellers</a>
+						</li>
+						<li class="menu-item">
+							<a href="" class="menu-link">Containers</a>
+						</li>
+						<li class="menu-item">
+							<a href="" class="menu-link">Diffusers</a>
+						</li>
+						<li class="menu-item">
+							<a href="" class="menu-link">New</a>
+						</li>
+						<li class="menu-item">
+							<a href="" class="menu-link">Product</a>
+						</li>
+						<li class="menu-item">
+							<a href="" class="menu-link">LSP Difference</a>
+						</li>
+						<li class="menu-item">
+							<a href="" class="menu-link">Media</a>
+						</li>
+					</ul>
+				</nav>
+			</div> -->
+		
+			<!-- <img src="assets/img/Girl_Hero.png" alt=""> -->
+		
+		
+			<!-- <div class="header-menu-wrapper">
+				<div class="container">
+					<div class="logo">LOGO</div>
+					<div class="nav-drop">
+						<nav class="nav">
+							<ul class="header-menu">
+								<li class="current-menu-item">
+									<a href="#">Item 1</a>
+									<ul>
+										<li><a href="#">Item 2-1</a></li>
+										<li><a href="#">Item 2-2</a></li>
+										<li><a href="#">Item 2-3</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Item 2</a>
+									<ul>
+										<li>
+											<a href="#">Item 2-1</a>
+											<ul>
+												<li>
+													<a href="#">Item 3-1</a>
+													<ul>
+														<li><a href="#">Item 4-1</a></li>
+														<li><a href="#">Item 4-2</a></li>
+														<li><a href="#">Item 4-3</a></li>
+													</ul>
+												</li>
+												<li><a href="#">Item 3-2</a></li>
+												<li><a href="#">Item 3-3</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Item 2-2</a>
+											<ul>
+												<li><a href="#">Item 2-1</a></li>
+												<li><a href="#">Item 2-2</a></li>
+												<li><a href="#">Item 2-3</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Item 2-3</a>
+											<ul>
+												<li><a href="#">Item 2-1</a></li>
+												<li><a href="#">Item 2-2</a></li>
+												<li><a href="#">Item 2-3</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li class="has-mega-menu">
+									<a href="#">Mega 3</a>
+									<ul class="mega-menu">
+										<li>
+											<div class="col">
+												<h2>Heading 1</h2>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum elit velit, ultricies eget porta ac.</p>
+												<ul>
+													<li><a href="#">Regular link 1</a></li>
+													<li><a href="#">Regular link 2</a></li>
+												</ul>
+											</div>
+											<div class="col">
+												<h2>Heading 2</h2>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum elit velit, ultricies eget porta ac.</p>
+												<ul>
+													<li><a href="#">Regular link 1</a></li>
+													<li><a href="#">Regular link 2</a></li>
+												</ul>
+											</div>
+											<div class="col">
+												<h2>Heading 3</h2>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Vestibulum elit velit, ultricies eget porta ac.</p>
+												<ul>
+													<li><a href="#">Regular link 1</a></li>
+													<li><a href="#">Regular link 2</a></li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Item 4</a>
+									<ul>
+										<li><a href="#">Item 2-1</a></li>
+										<li>
+											<a href="#">Item 2-2</a>
+											<ul>
+												<li><a href="#">Item 2-1</a></li>
+												<li><a href="#">Item 2-2</a></li>
+												<li><a href="#">Item 2-3</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Item 2-3</a></li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<a href="!#" class="nav-opener"><span></span></a>
+				</div>
+			</div> -->
+		</header>
+		<main class="main">
+			<section class="promo" id="promo">
+				<div class="container">
+					<nav class="nav">
+						<ul class="menu light">
+							<li class="menu-item">
+								<a href class="menu-link">Home</a>
+							</li>
+							<li class="menu-item">
+								<a href class="menu-link">Blowout sale</a>
+							</li>
+							<li class="menu-item">
+								<a href class="menu-link">Lifestyle</a>
+							</li>
+							<li class="menu-item">
+								<a href class="menu-link">Books</a>
+							</li>
+							<li class="menu-item">
+								<a href class="menu-link">Best sellers</a>
+							</li>
+							<li class="menu-item">
+								<a href class="menu-link">Containers</a>
+							</li>
+							<li class="menu-item">
+								<a href class="menu-link">Diffusers</a>
+							</li>
+							<li class="menu-item">
+								<a href class="menu-link">New</a>
+							</li>
+							<li class="menu-item">
+								<a href class="menu-link">Product</a>
+							</li>
+							<li class="menu-item">
+								<a href class="menu-link">LSP Difference</a>
+							</li>
+							<li class="menu-item">
+								<a href class="menu-link">Media</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="phrase">
+					<img class="phrase-pic" src="assets/img/phraze.png" alt="Take your knowledge anywhere!" srcset="assets/img/phraze@2x.png 2x">
+				</div>
+				<div class="slider">
+					<div class="slider-item">
+						<h3 class="slider-name">Pocket-On-the-Go<br> Mobile App</h3>
+						<div class="slider-info">
+							<div class="phone-background">
+								<img class="phone-picture" src="assets/img/phone.png" alt="Phone" srcset="assets/img/phone@2x.png 2x">
+							</div>
+							<div class="slider-proposal">
+								<span class="slider-only">Only</span>
+								<p class="slider-price"><sup>$</sup>7.95</p>
+								<p class="slider-text">
+									For Preferred Members only to gift to their<br> team members<br> and friends.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="slider-item">
+						<h3 class="slider-name">Pocket-On-the-Go<br> Mobile App</h3>
+						<div class="slider-info">
+							<div class="phone-background">
+								<img class="phone-picture" src="assets/img/phone.png" alt="Phone" srcset="assets/img/phone@2x.png 2x">
+							</div>
+							<div class="slider-proposal">
+								<span class="slider-only">Only</span>
+								<p class="slider-price"><sup>$</sup>7.95</p>
+								<p class="slider-text">
+									For Preferred Members only to gift to their<br> team members<br> and friends.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="slider-item">
+						<h3 class="slider-name">Pocket-On-the-Go<br> Mobile App</h3>
+						<div class="slider-info">
+							<div class="phone-background">
+								<img class="phone-picture" src="assets/img/phone.png" alt="Phone" srcset="assets/img/phone@2x.png 2x">
+							</div>
+							<div class="slider-proposal">
+								<span class="slider-only">Only</span>
+								<p class="slider-price"><sup>$</sup>7.95</p>
+								<p class="slider-text">
+									For Preferred Members only to gift to their<br> team members<br> and friends.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="slider-item">
+						<h3 class="slider-name">Pocket-On-the-Go<br> Mobile App</h3>
+						<div class="slider-info">
+							<div class="phone-background">
+								<img class="phone-picture" src="assets/img/phone.png" alt="Phone" srcset="assets/img/phone@2x.png 2x">
+							</div>
+							<div class="slider-proposal">
+								<span class="slider-only">Only</span>
+								<p class="slider-price"><sup>$</sup>7.95</p>
+								<p class="slider-text">
+									For Preferred Members only to gift to their<br> team members<br> and friends.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="slider-item">
+						<h3 class="slider-name">Pocket-On-the-Go<br> Mobile App</h3>
+						<div class="slider-info">
+							<div class="phone-background">
+								<img class="phone-picture" src="assets/img/phone.png" alt="Phone" srcset="assets/img/phone@2x.png 2x">
+							</div>
+							<div class="slider-proposal">
+								<span class="slider-only">Only</span>
+								<p class="slider-price"><sup>$</sup>7.95</p>
+								<p class="slider-text">
+									For Preferred Members only to gift to their<br> team members<br> and friends.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="slider-item">
+						<h3 class="slider-name">Pocket-On-the-Go<br> Mobile App</h3>
+						<div class="slider-info">
+							<div class="phone-background">
+								<img class="phone-picture" src="assets/img/phone.png" alt="Phone" srcset="assets/img/phone@2x.png 2x">
+							</div>
+							<div class="slider-proposal">
+								<span class="slider-only">Only</span>
+								<p class="slider-price"><sup>$</sup>7.95</p>
+								<p class="slider-text">
+									For Preferred Members only to gift to their<br> team members<br> and friends.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="slider-item">
+						<h3 class="slider-name">Pocket-On-the-Go<br> Mobile App</h3>
+						<div class="slider-info">
+							<div class="phone-background">
+								<img class="phone-picture" src="assets/img/phone.png" alt="Phone" srcset="assets/img/phone@2x.png 2x">
+							</div>
+							<div class="slider-proposal">
+								<span class="slider-only">Only</span>
+								<p class="slider-price"><sup>$</sup>7.95</p>
+								<p class="slider-text">
+									For Preferred Members only to gift to their<br> team members<br> and friends.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="advertisements">
+					<div class="advertisements-container container">
+						<div class="advertisement advertisement-blog">
+							<p class="appeal">Check out our</p>
+							<h4 class="advertisement-name">Daily Life Science Blog</h4>
+							<img class="blog-pic" src="assets/img/daily-life-science-blog.png" alt="Daily Life Science Blog" srcset="assets/img/daily-life-science-blog@2x.png 2x">
+							<a href="https://www.dailylifescience.com" class="blog-website">
+								dailylifescience.com
+							</a>
+						</div>
+						<div class="advertisement advertisement-member">
+							<p class="appeal">Become an LSP</p>
+							<h4 class="advertisement-name">Preferred Member</h4>
+							<img class="member-card" src="assets/img/preferred-member.png" alt="Preferred Member Card" srcset="assets/img/preferred-member@2x.png 2x">
+							<a href="https://www.dailylifescience.com" class="member-link">
+								Sign Up Today!
+							</a>
+						</div>
+						<div class="advertisement advertisement-aroma">
+							<p class="appeal">Check out our</p>
+							<h4 class="advertisement-name">Essential Oil Aroma Series</h4>
+							<img class="aroma-pic" src="assets/img/essential-oil-aroma-series.png" alt="Essential Oil Aroma Series" srcset="assets/img/essential-oil-aroma-series@2x.png 2x">
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="sellers section" id="sellers">
+				<div class="container">
+					<h2 class="sellers-heading">Best sellers</h2>
+					<div class="cards">
+						<div class="card">
+							<img class="card-picture" src="assets/img/oil-quick.png" alt="7th Edition Essential Oil Quick Reference Guide" srcset="assets/img/oil-quick@2x.png 2x">
+							<h5 class="card-name">
+								7th Edition Essential Oil<br>	Quick Reference Guide
+							</h5>
+							<div class="card-prices">
+								<div class="price-types">
+									<p class="card-retail colored card-circle">
+										<sup>$</sup>3.50
+									</p>
+									<p class="price-type">Retail</p>
+								</div>
+								<div class="price-types">
+									<p class="card-price card-circle">
+										<sup>$</sup>2.50
+									</p>
+									<p class="price-type">Price</p>
+								</div>
+								<div class="price-types">
+									<p class="card-member card-circle">
+										<sup>$</sup>1.95
+									</p>
+									<p class="price-type">Member</p>
+								</div>
+							</div>
+							<button type="button" class="buy">Add to cart</button>
+							<button type="button" class="wishlist">Add to wishlist</button>
+						</div>
+
+						<div class="card">
+							<img class="card-picture" src="assets/img/oil-desk.png" alt="7th Edition Essential Oils Desk Reference" srcset="assets/img/oil-desk@2x.png 2x">
+							<h5 class="card-name">
+								7th Edition Essential<br> Oils Desk Reference
+							</h5>
+							<div class="card-prices">
+								<div class="price-types">
+									<p class="card-retail colored card-circle">
+										<sup>$</sup>49.95
+									</p>
+									<p class="price-type">Retail</p>
+								</div>
+								<div class="price-types">
+									<p class="card-price card-circle">
+										<sup>$</sup>44.95
+									</p>
+									<p class="price-type">Price</p>
+								</div>
+								<div class="price-types">
+									<p class="card-member card-circle">
+										<sup>$</sup>35.95
+									</p>
+									<p class="price-type">Member</p>
+								</div>
+							</div>
+							<button type="button" class="buy">Add to cart</button>
+							<button type="button" class="wishlist">Add to wishlist</button>
+						</div>
+
+						<div class="card">
+							<img class="card-picture" src="assets/img/oil-glass.png" alt="Oil + Glass" srcset="assets/img/oil-glass@2x.png 2x">
+							<h5 class="card-name">
+								Oil + Glass
+							</h5>
+							<div class="card-prices">
+								<div class="price-types">
+									<p class="card-retail colored card-circle">
+										<sup>$</sup>30.00
+									</p>
+									<p class="price-type">Retail</p>
+								</div>
+								<div class="price-types">
+									<p class="card-price card-circle">
+										<sup>$</sup>24.00
+									</p>
+									<p class="price-type">Price</p>
+								</div>
+								<div class="price-types">
+									<p class="card-member card-circle">
+										<sup>$</sup>24.00
+									</p>
+									<p class="price-type">Member</p>
+								</div>
+							</div>
+							<button type="button" class="buy">Add to cart</button>
+							<button type="button" class="wishlist">Add to wishlist</button>
+						</div>
+
+						<div class="card">
+							<img class="card-picture" src="assets/img/150-uses.png" alt="150 Uses: Fast and Fabulous" srcset="assets/img/150-uses@2x.png 2x">
+							<h5 class="card-name">
+								150 Uses: Fast and Fabulous
+							</h5>
+							<div class="card-prices">
+								<div class="price-types">
+									<p class="card-retail colored card-circle">
+										<sup>$</sup>4.50
+									</p>
+									<p class="price-type">Retail</p>
+								</div>
+								<div class="price-types">
+									<p class="card-price card-circle">
+										<sup>$</sup>3.50
+									</p>
+									<p class="price-type">Price</p>
+								</div>
+								<div class="price-types">
+									<p class="card-member card-circle">
+										<sup>$</sup>2.25
+									</p>
+									<p class="price-type">Member</p>
+								</div>
+							</div>
+							<button type="button" class="buy">Add to cart</button>
+							<button type="button" class="wishlist">Add to wishlist</button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="products section">
+				<div class="container">
+					<h2 class="products-heading">Featured Products</h2>
+					<div class="cards">
+						<div class="card">
+							<img class="card-picture" src="assets/img/animal-desk.png" alt="1st Edition Essential Oils	Animal Desk Reference" srcset="assets/img/animal-desk@2x.png 2x">
+							<h5 class="card-name">
+								1st Edition Essential Oils<br> Animal Desk Reference
+							</h5>
+							<div class="card-prices">
+								<div class="price-types">
+									<p class="card-retail card-circle">
+										<sup>$</sup>75.00
+									</p>
+									<p class="price-type">Retail</p>
+								</div>
+								<div class="price-types">
+									<p class="card-price card-circle">
+										<sup>$</sup>50.00
+									</p>
+									<p class="price-type">Price</p>
+								</div>
+								<div class="price-types">
+									<p class="card-member card-circle">
+										<sup>$</sup>38.40
+									</p>
+									<p class="price-type">Member</p>
+								</div>
+							</div>
+							<button type="button" class="buy">Add to cart</button>
+							<button type="button" class="wishlist">Add to wishlist</button>
+						</div>
+
+						<div class="card">
+							<img class="card-picture" src="assets/img/aroma-infant.png" alt="Aroma Infant" srcset="assets/img/aroma-infant@2x.png 2x">
+							<h5 class="card-name">
+								1st Edition Essential Oils<br> Animal Desk Reference
+							</h5>
+							<div class="card-prices">
+								<div class="price-types">
+									<p class="card-retail card-circle">
+										<sup>$</sup>13.50
+									</p>
+									<p class="price-type">Retail</p>
+								</div>
+								<div class="price-types">
+									<p class="card-price card-circle">
+										<sup>$</sup>11.95
+									</p>
+									<p class="price-type">Price</p>
+								</div>
+								<div class="price-types">
+									<p class="card-member card-circle">
+										<sup>$</sup>9.95
+									</p>
+									<p class="price-type">Member</p>
+								</div>
+							</div>
+							<button type="button" class="buy">Add to cart</button>
+							<button type="button" class="wishlist">Add to wishlist</button>
+						</div>
+
+						<div class="card">
+							<img class="card-picture" src="assets/img/private-collection.png" alt="Private Collection 1st and 2nd Edition Desk Reference Bundle" srcset="assets/img/private-collection@2x.png 2x">
+							<h5 class="card-name">
+								Private Collection 1st and 2nd<br> Edition Desk Reference Bundle
+							</h5>
+							<div class="card-prices">
+								<div class="price-types">
+									<p class="card-retail card-circle small">
+										<sup>$</sup>150.00
+									</p>
+									<p class="price-type">Retail</p>
+								</div>
+								<div class="price-types">
+									<p class="card-price card-circle small">
+										<sup>$</sup>129.00
+									</p>
+									<p class="price-type">Price</p>
+								</div>
+								<div class="price-types">
+									<p class="card-member card-circle">
+										<sup>$</sup>99.00
+									</p>
+									<p class="price-type">Member</p>
+								</div>
+							</div>
+							<button type="button" class="buy">Add to cart</button>
+							<button type="button" class="wishlist">Add to wishlist</button>
+						</div>
+
+						<div class="card">
+							<img class="card-picture" src="assets/img/cats-booklet.png" alt="Cats 101 Mini Booklet" srcset="assets/img/cats-booklet@2x.png 2x">
+							<h5 class="card-name">
+								Cats 101 Mini Booklet
+							</h5>
+							<div class="card-prices">
+								<div class="price-types">
+									<p class="card-retail card-circle">
+										<sup>$</sup>4.00
+									</p>
+									<p class="price-type">Retail</p>
+								</div>
+								<div class="price-types">
+									<p class="card-price card-circle">
+										<sup>$</sup>3.00
+									</p>
+									<p class="price-type">Price</p>
+								</div>
+								<div class="price-types">
+									<p class="card-member card-circle">
+										<sup>$</sup>2.50
+									</p>
+									<p class="price-type">Member</p>
+								</div>
+							</div>
+							<button type="button" class="buy">Add to cart</button>
+							<button type="button" class="wishlist">Add to wishlist</button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="news section">
+				<div class="container">
+					<h2 class="news-heading">News</h2>
+					<div class="news-block">
+						<div class="news-one">
+							<img class="news-picture" src="assets/img/essential-sharing.png" alt="Publication Spotlight: Essential Sharing" srcset="assets/img/essential-sharing@2x.png 2x">
+							<h4 class="news-name">
+								Publication Spotlight: Essential Sharing
+							</h4>
+							<p class="news-text">
+								Many people wonder were to start when it comes to building
+								their essential oils business. It can feel overwhelming when
+								trying to get your "pitch" right, explaining things like PV...
+							</p>
+							<button type="button" class="news-more">Read article</button>
+						</div>
+
+						<div class="news-one">
+							<img class="news-picture" src="assets/img/carrot-seed.png" alt="The Secrets Of Carrot Seed: Chemical Focus" srcset="assets/img/carrot-seed@2x.png 2x">
+							<h4 class="news-name">
+								The Secrets Of Carrot Seed: Chemical Focus
+							</h4>
+							<p class="news-text">
+								Identified by its warm and earthy, yet mildly sweet aroma,
+								carrot seed essential oil has a long history of being used
+								in ancient medicine, thanks to multiple healing properties. Together...
+							</p>
+							<button type="button" class="news-more">Read article</button>
+						</div>
+
+						<div class="news-one">
+							<img class="news-picture" src="assets/img/bergamot.png" alt="The Secrets Of Bergamot:	Chemical Focus" srcset="assets/img/bergamot@2x.png 2x">
+							<h4 class="news-name">
+								The Secrets Of Bergamot: Chemical Focus
+							</h4>
+							<p class="news-text">
+								Bergamot essential oil, extracted from
+								the Mediterranean’s bergamot orange tree,
+								provides more than just a spicy-floral aroma that
+								makes it one of the most used perfumery and...
+							</p>
+							<button type="button" class="news-more">Read article</button>
+						</div>
+
+						<div class="news-one">
+							<img class="news-picture" src="assets/img/black-pepper.png" alt="The Secrets Of Black Pepper:	Chemical Focus" srcset="assets/img/black-pepper@2x.png 2x">
+							<h4 class="news-name">
+								The Secrets Of Black Pepper: Chemical Focus
+							</h4>
+							<p class="news-text">
+								More than just a spice with a warm, musky scent, black pepper
+								essential oil offers users a wide variety of health and beauty benefits.
+								This is largely due to its lorem ipsum dolor set amut...
+							</p>
+							<button type="button" class="news-more">Read article</button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="promos section">
+				<div class="container">
+					<h2 class="promos-heading">Promos & Specials</h2>
+					<div class="actions">
+						<a href="#" class="actions-link">
+							<img class="actions-picture" src="assets/img/birthday-discount.png" alt="Your birthday? Get 20% off" srcset="assets/img/birthday-discount@2x.png 2x">
+						</a>
+						<a href="#" class="actions-link">
+							<img class="actions-picture" src="assets/img/share-training-tools.png" alt="Share & Training Tools" srcset="assets/img/share-training-tools@2x.png 2x">
+						</a>
+						<a href="#" class="actions-link">
+							<img class="actions-picture" src="assets/img/health-reference.png" alt="Health & Reference" srcset="assets/img/health-reference@2x.png 2x">
+						</a>
+					</div>
+				</div>
+			</section>
+			<section class="subscribe">
+				<h3 class="subscribe-heading">Sign up for the LSP Newsletter</h3>
+				<form action method="POST" class="subscribe-form">
+					<input class="subscribe-email" type="email" name="email" placeholder="Enter email address" required>
+					<button type="submit" class="subscribe-submit">Submit</button>
+				</form>
+			</section>
+		</main>
+	</div>
+	<footer class="footer">
+		<div class="footer-container container">
+			<div class="contacts">
+				<img class="footer-logo" src="assets/img/LSP_logo.png" alt srcset="assets/img/LSP_logo@2x.png 2x">
+				<a href="tel:1.800.336.6308" class="footer-phone">1.800.336.6308</a>
+				<p class="address">
+					Life Science Publishing<br>
+					520 S. 850 E., Unit C6<br>
+					Lehi, UT 84043
+				</p>
+			</div>
+	
+			<div class="links">
+				<div class="links-block">
+					<h6 class="links-heading">Navigation</h6>
+					<nav>
+						<ul class="links-list">
+							<li class="links-item">
+								<a href="#" class="links-link">Accessories</a>
+							</li>
+							<li class="links-item">
+								<a href="#" class="links-link">Best Sellers</a>
+							</li>
+							<li class="links-item">
+								<a href="#" class="links-link">Books-Brochures</a>
+							</li>
+							<li class="links-item">
+								<a href="#" class="links-link">Diffusers</a>
+							</li>
+							<li class="links-item">
+								<a href="#" class="links-link">Monthly Specials</a>
+							</li>
+							<li class="links-item">
+								<a href="#" class="links-link">Share-Training Tools</a>
+							</li>
+							<li class="links-item">
+								<a href="#" class="links-link">Video-Audio</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+	
+				<div class="links-block">
+					<h6 class="links-heading">Account</h6>
+					<nav>
+						<ul class="links-list">
+							<li class="links-item">
+								<a href="#" class="links-link">Login</a>
+							</li>
+							<li class="links-item">
+								<a href="#" class="links-link">Create Account</a>
+							</li>
+							<li class="links-item">
+								<a href="#" class="links-link">Forgot Password</a>
+							</li>
+							<li class="links-item">
+								<a href="#" class="links-link">Customer Service</a>
+							</li>
+							<li class="links-item">
+								<a href="#" class="links-link">Orders and Returns</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+	
+				<div class="links-block">
+					<h6 class="links-heading">Company</h6>
+					<nav>
+						<ul class="links-list">
+							<li class="links-item">
+								<a href="#" class="links-link">Contact Us</a>
+							</li>
+							<li class="links-item">
+								<a href="#" class="links-link">Terms & Condition</a>
+							</li>
+							<li class="links-item">
+								<a href="#" class="links-link">Privacy Policy</a>
+							</li>
+							<li class="links-item">
+								<a href="#" class="links-link">About us</a>
+							</li>
+							<li class="links-item">
+								<a href="#" class="links-link">Site Map</a>
+							</li>
+							<li class="links-item">
+								<a href="#" class="links-link">Internet Use Policy</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+	
+			<div class="another">
+				<a href="#">
+					<img class="networks" src="assets/img/social.png" alt="Social networks" srcset="assets/img/social@2x.png 2x">
+				</a>
+				<div>
+					<p class="past">Yesterday's wisdom</p>
+					<p class="now">Today's <span>Discovery</span></p>
+				</div>
+				<p class="copyrights">
+					&copy;2018 Life Science Publishing
+					<br>
+					All rights reserved.
+				</p>
+			</div>
+		</div>
+	</footer>
+	<!-- loading JS Start -->
+	
+	<script src="assets/js/jquery-3.2.1.min.js" defer></script>
+	<script src="assets/js/jquery.main.js" defer></script>
+	
+	<!-- loading JS End -->
+</body>
+</html>

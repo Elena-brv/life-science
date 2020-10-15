@@ -1,0 +1,270 @@
+.product {
+	margin-top: 42px;
+	width: 100%;
+
+	&-name {
+		margin-bottom: 9px;
+
+		font-size: 25px;
+		font-weight: 400;
+		line-height: 1.17;
+		letter-spacing: -0.5px;
+	}
+
+	&-text {
+		max-width: 355px;
+		margin-bottom: 3px;
+
+		font-size: 14px;
+		line-height: 1.35;
+		letter-spacing: 0.28px;
+	}
+
+	& .card-prices {
+		width: 100%;
+		text-align: center;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	& .card-circle {
+		$circleSize: 81px;
+		width: $circleSize;
+		height: $circleSize;
+		line-height: $circleSize;
+		font-size: 21px;
+
+		& sup {
+			font-size: 14px;
+		}
+	}
+
+	& .price-type {
+		font-size: 11px;
+	}
+
+	&-share {
+		margin-top: 54px;
+		display: flex;
+		align-items: center;
+	}
+}
+
+.breadcrumbs {
+	display: flex;
+
+	&-item {
+		position: relative;
+		font-size: 11px;
+		color: #898989;
+		letter-spacing: 0.66px;
+		text-transform: uppercase;
+
+		&:not(.active)::after {
+			content: "\a0››\a0";
+			position: relative;
+			top: -1px;
+		}
+
+		&.active {
+			color:  #464646;
+		}
+	}
+}
+
+.reviews {
+	display: flex;
+	align-items: center;
+	margin-bottom: 7px;
+
+	&-count {
+		margin-right: 24px;
+		color: #0072bc;
+		font-size: 13px;
+		font-weight: 400;
+		letter-spacing: -0.26px;
+	}
+
+	&-new {
+		padding: 0;
+		color: #0072bc;
+		font-weight: 600;
+		font-size: 12px;
+		letter-spacing: 0.24px;
+		text-transform: uppercase;
+
+		background-color: transparent;
+		border: none;
+	}
+}
+
+.stars {
+	width: 89px;
+	height: 21px;
+	margin-right: 7px;
+}
+
+.fa-pencil-alt {
+	color: #7d7d7d;
+	font-family: "Font Awesome 5 Free Solid";
+	font-size: 12px;
+	font-weight: 400;
+	letter-spacing: 0.24px;
+}
+
+.mark {
+	display: inline-block;
+	padding: 5px 6px;
+	margin-bottom: 25px;
+
+	color: #ffffff;
+	font-size: 11px;
+	font-weight: 400;
+	letter-spacing: -0.22px;
+	text-transform: uppercase;
+
+	border-radius: 5px;
+	background-color: #8dc63f;
+}
+
+.price-tier {
+	$tierSize: 110px;
+	width: $tierSize;
+	height: $tierSize;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid #acd373;
+	border-radius: 50%;
+
+	&-name {
+		margin-bottom: 9px;
+
+		color: #707070;
+		font-size: 13px;
+		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing: -0.26px;
+		line-height: 1.2;
+	}
+
+	&-low {
+		color: #c2c2c2;
+		font-size: 13px;
+	}
+
+	&-value {
+		color: #707070;
+		font-size: 24px;
+		letter-spacing: -0.48px;
+
+		& sup {
+			font-size: 15px;
+		}
+	}
+}
+
+.purchase {
+	margin-top: 19px;
+	position: relative;
+
+	&::after {
+		content: "";
+		width: 98%;
+		height: 1px;
+		position: absolute;
+		left: 0;
+		bottom: -27px;
+		background-color: #e1e1e1;
+	}
+
+	&-buy {
+		position: relative;
+		width: 276px;
+		height: 40px;
+
+		color: #fff;
+		font-size: 18px;
+		font-weight: 600;
+		letter-spacing: 0.36px;
+		text-transform: uppercase;
+
+		border: none;
+		border-radius: 20px;
+		background-color: #8dc63f;
+	}
+}
+
+.counter {
+	margin-right: 19px;
+	display: inline-block;
+	border-radius: 5px;
+	border: 1px solid #d7d7d7;
+
+	& button {
+		width: 32px;
+		height: 35px;
+
+		color: #7d7d7d;
+		font-size: 21px;
+
+		border-top: none;
+		border-bottom: none;
+		background-color: transparent;
+	}
+}
+
+.minus {
+	border-left: none;
+	border-right: 1px solid #d7d7d7;
+}
+
+.plus {
+	border-right: none;
+	border-left: 1px solid #d7d7d7;
+}
+
+.count {
+	display: inline-block;
+	text-align: center;
+	width: 33px;
+	font-size: 18px;
+}
+
+.share {
+	margin-right: 20px;
+
+	color: #7d7d7d;
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 0.24px;
+	text-transform: uppercase;
+
+	&-icons {
+		margin-right: 33px;
+	}
+
+	&-icon {
+		color: #707070;
+		font-family: "Font Awesome 5 Free Solid";
+		font-size: 20px;
+		font-weight: 400;
+
+		&:not(:last-child) {
+			margin-right: 15px;
+		}
+	}
+
+	&-wishlist {
+		color: #0072bc;
+		font-size: 12px;
+		font-weight: 600;
+		letter-spacing: 0.24px;
+		text-transform: uppercase;
+
+		border: none;
+		background-color: transparent;
+	}
+}

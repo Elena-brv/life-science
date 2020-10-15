@@ -1,0 +1,288 @@
+//-------------------- #html
+html {
+	$html-font-size: $rem-base;
+	font-size: $html-font-size;
+	box-sizing: border-box;
+	//fix iOS bugs reset paddings
+	padding: constant(safe-area-inset); //iOS 11
+	padding: env(safe-area-inset); //iOS 11.2+
+
+	@include media("<=desktop") {
+		font-size: $html-font-size - 1.5px;
+	}
+
+	@include media("<=tablet") {
+		font-size: $html-font-size - 2px;
+	}
+
+	@include media("<=phone") {
+		font-size: $html-font-size - 2.5px;
+	}
+
+	@include media("<=xs-phone") {
+		overflow-x: hidden;
+		font-size: $html-font-size - 3px;
+	}
+}
+
+* {
+	box-sizing: inherit;
+	// max-height to all
+	max-height: 1000000px;
+
+	&:after,
+	&:before {
+		box-sizing: inherit;
+	}
+}
+
+//-------------------- #body
+body {
+	color: $base-text-color;
+	font: #{$font-size-base}/#{$line-height-base} $base-font-family;
+	min-width: 320px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+//---------------- #h style h1-h6
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6,
+.h {
+	font-family: inherit;
+	font-weight: bold;
+	color: $h1-h6-color;
+
+	a {
+		color: inherit;
+		font-size: inherit;
+	}
+}
+
+h1,
+.h1 {
+	@include fs($h1-font-size);
+	margin: 0 0 0.3em;
+}
+
+h2,
+.h2 {
+	@include fs($h2-font-size);
+	margin: 0 0 0.4em;
+}
+
+h3,
+.h3 {
+	@include fs($h3-font-size);
+	margin: 0 0 0.5em;
+}
+
+h4,
+.h4 {
+	@include fs($h4-font-size);
+	margin: 0 0 0.6em;
+}
+
+h5,
+.h5 {
+	@include fs($h5-font-size);
+	margin: 0 0 0.7em;
+}
+
+h6,
+.h6 {
+	@include fs($h6-font-size);
+	margin: 0 0 0.8em;
+}
+
+//------------------- #p
+p {
+	margin-bottom: 1.2em;
+	margin-top: 0;
+}
+
+//------------------- #a
+a {
+	color: darken($color-brand, 30%);
+	text-decoration: none;
+	transition: all $animation-speed $animation-name;
+
+	&:hover {
+		color: darken($color-brand, 10%);
+	}
+}
+
+//------------------- #img
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: top;
+}
+
+//----------------------------- style #ol #ul #li
+ul,
+ol {
+	list-style: none;
+	margin-top: 0;
+	padding-left: 0px;
+
+	li {
+		list-style: none;
+	}
+}
+
+//common style ol ul
+#sidebar ol:not([class]),
+#sidebar ul:not([class]),
+.entry ol:not([class]),
+.entry ul:not([class]),
+ul.list-style,
+ol.list-style {
+	$margin-li-top: 10px;
+	@include fs(($font-size-base + 2px));
+	margin: 0 0 1.2em 0;
+	color: $base-text-color;
+
+	li {
+		padding-left: 20px;
+		position: relative;
+
+		& + li {
+			margin-top: $margin-li-top;
+		}
+	}
+
+	// nested list ul
+	ul {
+		margin-bottom: 0;
+		margin-top: $margin-li-top;
+	}
+
+	// nested list ol
+	ol {
+		margin-bottom: 0;
+		margin-top: $margin-li-top;
+	}
+}
+
+//style only ul
+#sidebar ul:not([class]),
+.entry ul:not([class]),
+ul.list-style {
+	&>li {
+		padding-left: 15px;
+
+		&:before {
+			content: "";
+			position: absolute;
+			@include size(5px);
+			top: 0.5em;
+			left: 0;
+			transform: translateY(-50%);
+			background-color: currentColor;
+		}
+	}
+}
+
+//style only ol
+#sidebar ol:not([class]),
+.entry ol:not([class]),
+ol.list-style {
+	counter-reset: list;
+
+	&>li {
+		padding-left: 22px;
+
+		&:before {
+			content: counter(list) ".";
+			counter-increment: list;
+			position: absolute;
+			top: 0;
+			left: 0px;
+			font-weight: bold;
+		}
+	}
+}
+
+//---------------------- #table
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	margin-bottom: 1.2em;
+
+	th {
+		@include fs($font-size-base);
+		padding: 10px 15px;
+		color: $base-text-color;
+		text-align: left;
+		border-bottom: 1px solid #979797;
+
+		@include media("<=phone") {
+			padding: 10px 5px;
+		}
+
+		& + th {
+			text-align: center;
+		}
+	}
+
+	td {
+		@include fs($font-size-base);
+		padding: 10px 15px;
+		color: $base-text-color;
+		border-bottom: 1px solid #979797;
+
+		@include media("<=phone") {
+			padding: 7px 5px;
+		}
+
+		& + td {
+			text-align: center;
+		}
+	}
+}
+
+//------------------- #pre
+pre {
+	max-width: 100%;
+	background: rgba(#000, 0.1);
+	padding: 0.5em;
+}
+
+//------------------- #blockquote
+blockquote {
+	@include fs(25px);
+	color: $second-text-color;
+	background: transparent;
+	border-left: 6px solid #ECECEC;
+	padding: 5px 0 5px 28px;
+	margin: 0 0 1.2em;
+}
+
+//------------------- #dl | dt | dd
+dl {
+	margin: 0 0 1.2em 0;
+
+	dt {
+		float: left;
+		clear: left;
+		font-weight: bold;
+		padding: 10px 5px;
+	}
+
+	dd {
+		margin-left: 0;
+		padding: 10px 0;
+	}
+}

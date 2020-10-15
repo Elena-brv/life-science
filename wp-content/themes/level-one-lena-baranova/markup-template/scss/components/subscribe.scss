@@ -1,0 +1,50 @@
+.subscribe {
+	padding-top: 95px;
+	padding-bottom: 105px;
+	background-image: url("../img/lavendar_field.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&-heading {
+		margin-bottom: 31px;
+		display: inline-block;
+		font-family: "Patua One", cursive;
+		font-size: 24px;
+		color: #fff;
+		font-weight: 400;
+	}
+
+	&-form {
+		display: flex;
+	}
+
+	&-email {
+		width: 585px;
+		height: 42px;
+		padding-left: 15px;
+		margin-right: 6px;
+		border: none;
+		border-radius: 5px;
+		background-color: #ffffff;
+
+		&::placeholder {
+			color: #b7b7b7;
+			font-size: 18px;
+		}
+	}
+
+	&-submit {
+		width: 109px;
+		height: 42px;
+
+		color: #ffffff;
+		font-size: 18px;
+
+		border: none;
+		border-radius: 5px;
+		background-color: #acd373;
+	}
+}

@@ -1,0 +1,10 @@
+.sellers {
+	padding-bottom: 50px;
+	text-align: center;
+
+	&-heading {
+		@include h2Heading(#fad482);
+		margin-bottom: 37px;
+	}
+}
+
