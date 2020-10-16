@@ -15,6 +15,7 @@
 		width: 220px;
 		height: 220px;
 		border: 0.5px solid #959595;
+		cursor: pointer;
 	}
 
 	&-name {
@@ -35,7 +36,8 @@
 	&-prices {
 		width: 200px;
 		display: flex;
-	  justify-content: space-between;
+		justify-content: space-between;
+		margin: 0 auto;
 	}
 
 	&-circle {
@@ -80,6 +82,7 @@
 	&-types {
 		display: flex;
 		flex-direction: column;
+		// margin: 0 5px;
 	}
 
 	&-type {
@@ -111,6 +114,7 @@
 
 	font-family: "Lato-Semibold", sans-serif;
 	font-size: 12px;
+	font-weight: 600;
 	letter-spacing: 0.24px;
 	text-transform: uppercase;
 
@@ -118,3 +122,8 @@
 	background-color: transparent;
 	border: none;
 }
+
+// .order {
+// 	display: flex;
+// 	flex-direction: column;
+// }

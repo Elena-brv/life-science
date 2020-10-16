@@ -128,6 +128,36 @@
 	background-color: #8dc63f;
 }
 
+.prices {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+
+	&-choice {
+		display: flex;
+		justify-content: space-between;
+		width: 286px;
+	}
+}
+
+input[type=radio] {
+	display: none;
+}
+
+.price-label {
+	cursor: pointer;
+
+	&:hover {
+		transform: scale(1.1);
+	}
+}
+
+.price-types.selected {
+	font-weight: 700;
+}
+
 .price-tier {
 	$tierSize: 110px;
 	width: $tierSize;
@@ -226,11 +256,19 @@
 	border-left: 1px solid #d7d7d7;
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+	appearance: none;
+	margin: 0;
+}
+
 .count {
 	display: inline-block;
 	text-align: center;
 	width: 33px;
 	font-size: 18px;
+	font-weight: 400;
+	border: none;
 }
 
 .share {

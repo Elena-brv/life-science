@@ -113,42 +113,81 @@
 								essential oils with your animals.
 							</p>
 
-							<div class="card-prices">
-								<div class="price-types">
-									<p class="card-retail colored card-circle">
-										<sup>$</sup>150.00
-									</p>
-									<p class="price-type">Retail</p>
-								</div>
-								<div class="price-types">
-									<p class="card-price card-circle">
-										<sup>$</sup>129.00
-									</p>
-									<p class="price-type">Price</p>
-								</div>
-								<div class="price-types">
-									<p class="card-member card-circle">
-										<sup>$</sup>99.00
-									</p>
-									<p class="price-type">Member</p>
-								</div>
-								<div class="price-tier">
-									<h4 class="price-tier-name">Tier<br> pricing</h4>
-									<p class="price-tier-low">As low as:</p>
-									<p class="price-tier-value">
-										<sup>$</sup>79.00
-									</p>
-								</div>
-							</div>
+							<form
+								class="order"
+								action=""
+								method="GET"
+							>
+								<div class="prices">
+									<div class="prices-choice">
+										<input
+											type="radio"
+											id="retail"
+											name="price"
+											value="150.00"
+										>
+										<label for="retail" class="price-label">
+											<div class="price-types">
+												<p class="card-retail colored card-circle">
+													<sup>$</sup>150.00
+												</p>
+												<p class="price-type">Retail</p>
+											</div>
+										</label>
 
-							<div class="purchase">
-								<div class="counter">
-									<button type="button" class="minus">-</button>
-									<span class="count">1</span>
-									<button type="button" class="plus">+</button>
+										<input
+											type="radio"
+											id="price"
+											name="price"
+											value="129.00"
+										>
+										<label for="price" class="price-label">
+											<div class="price-types">
+												<p class="card-price card-circle">
+													<sup>$</sup>129.00
+												</p>
+												<p class="price-type">Price</p>
+											</div>
+										</label>
+
+										<input
+											type="radio"
+											id="member"
+											name="price"
+											value="99.00"
+										>
+										<label for="member" class="price-label">
+											<div class="price-types">
+												<p class="card-member card-circle">
+													<sup>$</sup>99.00
+												</p>
+												<p class="price-type">Member</p>
+											</div>
+										</label>
+									</div>
+
+									<div class="price-tier">
+										<h4 class="price-tier-name">Tier<br> pricing</h4>
+										<p class="price-tier-low">As low as:</p>
+										<p class="price-tier-value">
+											<sup>$</sup>79.00
+										</p>
+									</div>
 								</div>
-								<button type="button" class="purchase-buy">Add to cart</button>
-							</div>
+								<div class="purchase">
+									<div class="counter">
+										<button type="button" class="minus">-</button>
+										<input
+											type="number"
+											class="count"
+											name="count"
+											value="1"
+										>
+										<button type="button" class="plus">+</button>
+									</div>
+									<button type="submit" class="purchase-buy">Add to cart</button>
+								</div>
+							</form>
 
 							<div class="product-share">
 								<p class="share">Share</p>
@@ -362,28 +401,57 @@
 							<h5 class="card-name">
 								7th Edition Essential Oil<br>	Quick Reference Guide
 							</h5>
-							<div class="card-prices">
-								<div class="price-types">
-									<p class="card-retail card-circle">
-										<sup>$</sup>3.50
-									</p>
-									<p class="price-type">Retail</p>
+							<form
+								class="order"
+								action=""
+								method="GET"
+							>
+								<div class="card-prices">
+									<label class="price-label">
+										<input
+											type="radio"
+											name="price"
+											value="3.50"
+										>
+										<div class="price-types">
+											<p class="card-retail colored card-circle">
+												<sup>$</sup>3.50
+											</p>
+											<p class="price-type">Retail</p>
+										</div>
+									</label>
+
+									<label class="price-label">
+										<input
+											type="radio"
+											name="price"
+											value="2.50"
+										>
+										<div class="price-types">
+											<p class="card-price card-circle">
+												<sup>$</sup>2.50
+											</p>
+											<p class="price-type">Price</p>
+										</div>
+									</label>
+
+									<label for="member" class="price-label">
+										<input
+											type="radio"
+											name="price"
+											value="1.95"
+										>
+										<div class="price-types">
+											<p class="card-member card-circle">
+												<sup>$</sup>1.95
+											</p>
+											<p class="price-type">Member</p>
+										</div>
+									</label>
 								</div>
-								<div class="price-types">
-									<p class="card-price card-circle">
-										<sup>$</sup>2.50
-									</p>
-									<p class="price-type">Price</p>
-								</div>
-								<div class="price-types">
-									<p class="card-member card-circle">
-										<sup>$</sup>1.95
-									</p>
-									<p class="price-type">Member</p>
-								</div>
-							</div>
-							<button type="button" class="buy">Add to cart</button>
-							<button type="button" class="wishlist">Add to wishlist</button>
+								<button type="button" class="buy">Add to cart</button>
+								<button type="button" class="wishlist">Add to wishlist</button>
+							</form>
 						</div>
 
 						<div class="card">
@@ -395,28 +463,57 @@
 							<h5 class="card-name">
 								7th Edition Essential<br> Oils Desk Reference
 							</h5>
-							<div class="card-prices">
-								<div class="price-types">
-									<p class="card-retail card-circle">
-										<sup>$</sup>49.95
-									</p>
-									<p class="price-type">Retail</p>
+							<form
+								class="order"
+								action=""
+								method="GET"
+							>
+								<div class="card-prices">
+									<label class="price-label">
+										<input
+											type="radio"
+											name="price"
+											value="49.95"
+										>
+										<div class="price-types">
+											<p class="card-retail colored card-circle">
+												<sup>$</sup>49.95
+											</p>
+											<p class="price-type">Retail</p>
+										</div>
+									</label>
+
+									<label class="price-label">
+										<input
+											type="radio"
+											name="price"
+											value="44.95"
+										>
+										<div class="price-types">
+											<p class="card-price card-circle">
+												<sup>$</sup>44.95
+											</p>
+											<p class="price-type">Price</p>
+										</div>
+									</label>
+
+									<label for="member" class="price-label">
+										<input
+											type="radio"
+											name="price"
+											value="35.95"
+										>
+										<div class="price-types">
+											<p class="card-member card-circle">
+												<sup>$</sup>35.95
+											</p>
+											<p class="price-type">Member</p>
+										</div>
+									</label>
 								</div>
-								<div class="price-types">
-									<p class="card-price card-circle">
-										<sup>$</sup>44.95
-									</p>
-									<p class="price-type">Price</p>
-								</div>
-								<div class="price-types">
-									<p class="card-member card-circle">
-										<sup>$</sup>35.95
-									</p>
-									<p class="price-type">Member</p>
-								</div>
-							</div>
-							<button type="button" class="buy">Add to cart</button>
-							<button type="button" class="wishlist">Add to wishlist</button>
+								<button type="button" class="buy">Add to cart</button>
+								<button type="button" class="wishlist">Add to wishlist</button>
+							</form>
 						</div>
 
 						<div class="card">
@@ -428,28 +525,57 @@
 							<h5 class="card-name">
 								Oil + Glass
 							</h5>
-							<div class="card-prices">
-								<div class="price-types">
-									<p class="card-retail card-circle">
-										<sup>$</sup>30.00
-									</p>
-									<p class="price-type">Retail</p>
+							<form
+								class="order"
+								action=""
+								method="GET"
+							>
+								<div class="card-prices">
+									<label class="price-label">
+										<input
+											type="radio"
+											name="price"
+											value="30.00"
+										>
+										<div class="price-types">
+											<p class="card-retail colored card-circle">
+												<sup>$</sup>30.00
+											</p>
+											<p class="price-type">Retail</p>
+										</div>
+									</label>
+
+									<label class="price-label">
+										<input
+											type="radio"
+											name="price"
+											value="24.00"
+										>
+										<div class="price-types">
+											<p class="card-price card-circle">
+												<sup>$</sup>24.00
+											</p>
+											<p class="price-type">Price</p>
+										</div>
+									</label>
+
+									<label for="member" class="price-label">
+										<input
+											type="radio"
+											name="price"
+											value="24.00"
+										>
+										<div class="price-types">
+											<p class="card-member card-circle">
+												<sup>$</sup>24.00
+											</p>
+											<p class="price-type">Member</p>
+										</div>
+									</label>
 								</div>
-								<div class="price-types">
-									<p class="card-price card-circle">
-										<sup>$</sup>24.00
-									</p>
-									<p class="price-type">Price</p>
-								</div>
-								<div class="price-types">
-									<p class="card-member card-circle">
-										<sup>$</sup>24.00
-									</p>
-									<p class="price-type">Member</p>
-								</div>
-							</div>
-							<button type="button" class="buy">Add to cart</button>
-							<button type="button" class="wishlist">Add to wishlist</button>
+								<button type="button" class="buy">Add to cart</button>
+								<button type="button" class="wishlist">Add to wishlist</button>
+							</form>
 						</div>
 
 						<div class="card">
@@ -461,28 +587,57 @@
 							<h5 class="card-name">
 								150 Uses: Fast and Fabulous
 							</h5>
-							<div class="card-prices">
-								<div class="price-types">
-									<p class="card-retail card-circle">
-										<sup>$</sup>4.50
-									</p>
-									<p class="price-type">Retail</p>
+							<form
+								class="order"
+								action=""
+								method="GET"
+							>
+								<div class="card-prices">
+									<label class="price-label">
+										<input
+											type="radio"
+											name="price"
+											value="4.50"
+										>
+										<div class="price-types">
+											<p class="card-retail colored card-circle">
+												<sup>$</sup>4.50
+											</p>
+											<p class="price-type">Retail</p>
+										</div>
+									</label>
+
+									<label class="price-label">
+										<input
+											type="radio"
+											name="price"
+											value="3.50"
+										>
+										<div class="price-types">
+											<p class="card-price card-circle">
+												<sup>$</sup>3.50
+											</p>
+											<p class="price-type">Price</p>
+										</div>
+									</label>
+
+									<label for="member" class="price-label">
+										<input
+											type="radio"
+											name="price"
+											value="2.25"
+										>
+										<div class="price-types">
+											<p class="card-member card-circle">
+												<sup>$</sup>2.25
+											</p>
+											<p class="price-type">Member</p>
+										</div>
+									</label>
 								</div>
-								<div class="price-types">
-									<p class="card-price card-circle">
-										<sup>$</sup>3.50
-									</p>
-									<p class="price-type">Price</p>
-								</div>
-								<div class="price-types">
-									<p class="card-member card-circle">
-										<sup>$</sup>2.25
-									</p>
-									<p class="price-type">Member</p>
-								</div>
-							</div>
-							<button type="button" class="buy">Add to cart</button>
-							<button type="button" class="wishlist">Add to wishlist</button>
+								<button type="button" class="buy">Add to cart</button>
+								<button type="button" class="wishlist">Add to wishlist</button>
+							</form>
 						</div>
 					</div>
 				</div>

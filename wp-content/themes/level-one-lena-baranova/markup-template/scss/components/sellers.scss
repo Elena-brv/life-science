@@ -1,6 +1,7 @@
 .sellers {
 	padding-bottom: 50px;
 	text-align: center;
+	position: relative;
 
 	&-heading {
 		@include h2Heading(#fad482);

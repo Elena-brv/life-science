@@ -4,6 +4,13 @@ jQuery(document).ready(function() {
 	isElementExist(".slider", initSlickSlider);
 	isElementExist(".about-item", initTabs);
 	isElementExist(".picture-small", initProductGallery);
+	isElementExist(".card-picture", showLightbox);
+	isElementExist(".lightbox-close", closeLightBox);
+	isElementExist(".minus", decreaseCounter);
+	isElementExist(".plus", increaseCounter);
+	isElementExist(".buy, .purchase-buy", initCountCart);
+	isElementExist(".price-label", selectPrice);
+	isElementExist(".promos", showHidePromos);
 });
 
 //-------- -------- -------- --------
@@ -71,6 +78,93 @@ function initProductGallery() {
 		$('.picture-main').attr('src', $(this).attr('src'));
 	});
 }
+
+function showLightbox() {
+	$('.card-picture').click(function() {
+		$('.lightbox').css('display', 'block');
+		$('.overlay').css('display', 'block');
+	})
+}
+
+function closeLightBox() {
+	$('.lightbox-close').click(function() {
+		$('.lightbox').css('display', 'none');
+		$('.overlay').css('display', 'none');
+	})
+}
+
+
+function initCounter() {
+	const count = $('.count');
+
+	$('.minus').click(function() {
+		if (+count.val() > 1) {
+			count.val(+count.val() - 1);
+		}
+	})
+
+	$('.plus').click(function() {
+		if (+count.val() < 99) {
+			count.val(+count.val() + 1);
+		}
+	})
+}
+	// function countMinus() {
+	// 	console.log(101, +count.val())
+	// 	if (+count.val() > 1) {
+	// 		count.val(+count.val() - 1);
+	// 	}
+	// }
+
+	// function countPlus() {
+	// 	console.log(108, +count.val())
+	// 	if (+count.val() < 99) {
+	// 		count.val(+count.val() + 1);
+	// 	}
+	// }
+
+function decreaseCounter() {
+	$('.minus').click(function() {
+		const count = $('.count');
+		if (+count.val() > 1) {
+			count.val(+count.val() - 1);
+		}
+	})
+}
+
+function increaseCounter() {
+	$('.plus').click(function() {
+		const count = $('.count');
+		if (+count.val() < 99) {
+			count.val(+count.val() + 1);
+		}
+	})
+}
+
+function initCountCart() {
+	$('.buy, .purchase-buy').click(function() {
+		const newCount = +($('.cart-count').text()) + 1;
+		$('.cart-count').text('' + newCount);
+	})
+}
+
+function selectPrice() {
+	$('.price-label').click(function() {
+		$('.price-types').removeClass('selected');
+		$(this).children().addClass('selected');
+	})
+}
+
+function showHidePromos() {
+	$('.promos').mouseover(function() {
+		$('.actions').css('display', 'flex');
+	})
+
+	$('.promos').mouseout(function() {
+		$('.actions').css('display', 'none');
+	})
+}
+
 //-------- -------- -------- --------
 //-------- js custom end
 //-------- -------- -------- --------
