@@ -2,6 +2,7 @@
 	background-color: #ebebeb;
 	padding-bottom: 41px;
 	text-align: center;
+	position: relative;
 
 	&-heading {
 		@include h2Heading(#84d5d8);

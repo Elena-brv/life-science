@@ -5,7 +5,7 @@ jQuery(document).ready(function() {
 	isElementExist(".about-item", initTabs);
 	isElementExist(".picture-small", initProductGallery);
 	isElementExist(".card-picture", showLightbox);
-	isElementExist(".lightbox-close", closeLightBox);
+	isElementExist(".lightbox-close, .overlay", closeLightBox);
 	isElementExist(".minus", decreaseCounter);
 	isElementExist(".plus", increaseCounter);
 	isElementExist(".buy, .purchase-buy", initCountCart);
@@ -61,8 +61,8 @@ function initTabs() {
 	$('.about-item').click(function(event) {
 		event.preventDefault();
 
-		$('.about-item').removeClass('active');
-		$('.content-item').removeClass('selected');
+		$(this).closest('.about').find('.about-item').removeClass('active');
+		$(this).closest('.about').find('.content-item').removeClass('selected');
 
 		$(this).addClass('active');
 		$($(this).attr('href')).addClass('selected');
@@ -75,53 +75,23 @@ function initProductGallery() {
 		$('.picture-small').removeClass('current');
 		$(this).addClass('current');
 
-		$('.picture-main').attr('src', $(this).attr('src'));
+		$(this).closest('.gallery').children('.picture-main').attr('src', $(this).attr('src'));
 	});
 }
 
 function showLightbox() {
 	$('.card-picture').click(function() {
-		$('.lightbox').css('display', 'block');
-		$('.overlay').css('display', 'block');
+		$(this).siblings('.lightbox').css('display', 'block');
+		$(this).siblings('.lightbox').children('.overlay').css('display', 'block');
 	})
 }
 
 function closeLightBox() {
-	$('.lightbox-close').click(function() {
+	$('.lightbox-close, .overlay').click(function() {
 		$('.lightbox').css('display', 'none');
 		$('.overlay').css('display', 'none');
 	})
 }
-
-
-function initCounter() {
-	const count = $('.count');
-
-	$('.minus').click(function() {
-		if (+count.val() > 1) {
-			count.val(+count.val() - 1);
-		}
-	})
-
-	$('.plus').click(function() {
-		if (+count.val() < 99) {
-			count.val(+count.val() + 1);
-		}
-	})
-}
-	// function countMinus() {
-	// 	console.log(101, +count.val())
-	// 	if (+count.val() > 1) {
-	// 		count.val(+count.val() - 1);
-	// 	}
-	// }
-
-	// function countPlus() {
-	// 	console.log(108, +count.val())
-	// 	if (+count.val() < 99) {
-	// 		count.val(+count.val() + 1);
-	// 	}
-	// }
 
 function decreaseCounter() {
 	$('.minus').click(function() {

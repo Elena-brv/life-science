@@ -4,6 +4,11 @@
 	padding-left: 150px;
 	padding-right: 150px;
 
+	@media (max-width: 1299px) {
+		padding-left: 5vw;
+		padding-right: 5vw;
+	}
+
 	// @media (min-width: 812px) and (max-height: 414px) {
 	// 	//increase paddings that content didn't disturb notch for landscape orientation https://twitter.com/i/status/907911237983449088
 	// 	padding-left: 50px !important;
