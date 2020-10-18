@@ -1,5 +1,13 @@
 .gallery {
 	display: flex;
+
+	@include media("<=md-desktop") {
+		margin-right: 20px;
+	}
+
+	@include media("<=phone") {
+		margin-right: 0;
+	}
 }
 
 .pictures {
@@ -11,22 +19,61 @@
 .picture {
 
 	&-small {
-		width: 80px;
-		height: 80px;
+		$smallPictureSize: 80px;
+		width: $smallPictureSize;
+		height: $smallPictureSize;
 
 		margin-bottom: 8px;
 
 		border: 1px solid #b7b7b7;
 		cursor: pointer;
-		
+
 		&.current {
 			border: 3px solid #b7b7b7;
+		}
+
+		@include media("<=sm-phone") {
+			$smallPictureSize: 40px;
+			width: $smallPictureSize;
+			height: $smallPictureSize;
 		}
 	}
 
 	&-main {
-		width: 444px;
-		height: 444px;
-	}
+		$pictureSize: 444px;
+		width: $pictureSize;
+		height: $pictureSize;
 
+		@include media("<=md-desktop") {
+			$pictureSize: 420px;
+			width: $pictureSize;
+			height: $pictureSize;
+		}
+
+		@include media("<=desktop") {
+			margin-left: 15%;
+		}
+
+		@include media("<=tablet") {
+			margin-left: 0;
+		}
+
+		@include media("<=phone") {
+			$pictureSize: 320px;
+			width: $pictureSize;
+			height: $pictureSize;
+		}
+
+		// @include media("<=phone") {
+		// 	$pictureSize: 300px;
+		// 	width: $pictureSize;
+		// 	height: $pictureSize;
+		// }
+
+		@include media("<=sm-phone") {
+			$pictureSize: 220px;
+			width: $pictureSize;
+			height: $pictureSize;
+		}
+	}
 }

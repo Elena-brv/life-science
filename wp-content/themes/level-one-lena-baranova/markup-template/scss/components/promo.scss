@@ -20,6 +20,15 @@
 	background-color: rgba(253, 227, 137, 0.6);
 	border-radius: 50%;
 
+	@include media("<=desktop") {
+		top: 36%;
+		left: 1%;
+	}
+
+	@include media("<=tablet") {
+		top: 105px;
+		left: 5vw;
+	}
 
 	&-pic {
 		width: 145px;
@@ -28,32 +37,70 @@
 }
 
 .advertisements {
+	padding: 38px 0;
 	position: absolute;
 	bottom: 0;
 
 	background-color: rgba(255, 255, 255, 0.7);
 	width: 100%;
 
+	@include media("<=desktop") {
+		padding: 20px 0;
+	}
+
 	&-container {
-		display: flex;
-		align-items: center;
+		// display: flex;
+		// align-items: center;
+		// justify-content: space-between;
+		display: grid;
+		justify-content: space-between;
+		grid-template-columns: repeat(3, 320px);
+
+		@include media("<=desktop") {
+			grid-template-columns: repeat(auto-fill, 320px);
+			justify-content: center;
+			grid-row-gap: 10px;
+			grid-column-gap: 5%;
+
+			.advertisement:last-child {
+				position: relative;
+				left: calc(50% + 15px);
+
+				@include media("<=tablet") {
+					left: 0;
+				}
+			}
+		}
+
+		@include media("<=tablet") {
+			grid-template-columns: 320px;
+		}
 	}
 }
 
 .advertisement {
 	width: 320px;
-	margin: 38px 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	color: #fff;
 	line-height: 1;
 
+	@include media("<=tablet") {
+		&:last-child {
+			padding-bottom: 15px;
+		}
+	}
+
 	&-name {
 		margin-top: 11px;
 		font-family: "Patua One", cursive;
 		font-size: 24px;
 		letter-spacing: -0.48px;
+
+		@include media("<=tablet") {
+			font-size: 18px;
+		}
 	}
 
 	&-blog {
@@ -61,8 +108,6 @@
 	}
 
 	&-member {
-		margin-left: 18px;
-		margin-right: 18px;
 		background-color: rgba(17, 17, 17, 0.4);
 	}
 
@@ -80,6 +125,10 @@
 	width: 96px;
 	height: 65px;
 	margin-top: 12px;
+
+	@include media("<=tablet") {
+		display: none;
+	}
 }
 
 .blog-website {
@@ -90,10 +139,14 @@
 	color: #fff;
 }
 
-.member-card {
+.member-pic {
 	width: 114px;
 	height: 74px;
 	margin-top: 12px;
+
+	@include media("<=tablet") {
+		display: none;
+	}
 }
 
 .member-link {
@@ -108,4 +161,8 @@
 	height: 86px;
 	margin-top: 13px;
 	margin-bottom: 19px;
+
+	@include media("<=tablet") {
+		display: none;
+	}
 }

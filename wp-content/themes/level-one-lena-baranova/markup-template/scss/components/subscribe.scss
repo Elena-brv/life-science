@@ -15,10 +15,18 @@
 		font-size: 24px;
 		color: #fff;
 		font-weight: 400;
+		text-align: center;
 	}
 
 	&-form {
 		display: flex;
+		padding-left: 5vw;
+		padding-right: 5vw;
+
+		@include media("<=tablet") {
+			flex-direction: column;
+			width: 100%;
+		}
 	}
 
 	&-email {
@@ -29,6 +37,12 @@
 		border: none;
 		border-radius: 5px;
 		background-color: #ffffff;
+
+		@include media("<=tablet") {
+			width: 100%;
+			padding-left: 0;
+			text-align: center;
+		}
 
 		&::placeholder {
 			color: #b7b7b7;
@@ -46,5 +60,10 @@
 		border: none;
 		border-radius: 5px;
 		background-color: #acd373;
+
+		@include media("<=tablet") {
+			width: 100%;
+			margin-top: 15px;
+		}
 	}
 }

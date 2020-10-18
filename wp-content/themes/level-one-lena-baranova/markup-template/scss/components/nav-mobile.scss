@@ -1,0 +1,57 @@
+.nav-mobile {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.8;
+	z-index: 2;
+
+	& .menu {
+		display: flex;
+		flex-direction: column;
+		padding-top: 50px;
+		padding-left: 50px;
+	}
+
+	& .menu-link {
+		margin-bottom: 10px;
+	}
+}
+
+.navigation {
+	position: relative;
+
+	@include media("<=md-desktop") {
+		height: 42px;
+	}
+}
+
+.mobile-menu {
+	display: none;
+	position: absolute;
+	top: 12px;
+	right: 5vw;
+	border: none;
+	background: none;
+	z-index: 3;
+
+	@include media("<=md-desktop") {
+		display: block;
+	}
+	// @media (max-width: $mobileBreakPoint) {
+	// 	display: block;
+	// }
+
+	&-toggler {
+		width: 30px;
+		height: 30px;
+		display: none;
+		cursor: pointer;
+
+		&--active {
+			display: block;
+		}
+	}
+}

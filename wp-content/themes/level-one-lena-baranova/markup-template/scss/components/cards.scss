@@ -1,19 +1,33 @@
+$cardWidth: 220px;
+
 .cards {
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(4, $cardWidth);
 	justify-content: space-between;
+
+	@include media("<=desktop") {
+		grid-template-columns: repeat(2, $cardWidth);
+		grid-row-gap: 50px;
+		grid-column-gap: 13%;
+		justify-content: center;
+	}
+
+	@include media("<=phone") {
+		grid-template-columns: $cardWidth;
+		grid-column-gap: 0;
+	}
 }
 
 .card {
 	$circleSize: 60px;
-	width: 220px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 
 	&-picture {
 		margin: 20px;
-		width: 220px;
-		height: 220px;
+		width: $cardWidth;
+		height: $cardWidth;
 		border: 0.5px solid #959595;
 		cursor: pointer;
 	}

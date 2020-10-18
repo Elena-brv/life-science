@@ -5,4 +5,17 @@
 	grid-template-columns: 56% 41%;
 	grid-column-gap: 25px;
 
+	@include media("<=md-desktop") {
+		grid-template-columns: 53% 44%;
+	}
+
+	@include media("<=desktop") {
+		grid-template-columns: 1fr;
+		grid-row-gap: 50px;
+		justify-items: center;
+	}
+
+	@include media("<=phone") {
+		padding-bottom: 40px;
+	}
 }

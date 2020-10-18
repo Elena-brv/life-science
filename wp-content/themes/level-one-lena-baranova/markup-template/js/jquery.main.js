@@ -11,6 +11,7 @@ jQuery(document).ready(function() {
 	isElementExist(".buy, .purchase-buy", initCountCart);
 	isElementExist(".price-label", selectPrice);
 	isElementExist(".promos", showHidePromos);
+	isElementExist(".mobile-menu", initMobileMenu);
 });
 
 //-------- -------- -------- --------
@@ -47,6 +48,13 @@ function initSmartMenu() {
 	});
 }
 
+function initMobileMenu() {
+	$('.mobile-menu').click(function() {
+    $('.nav').toggleClass('nav-mobile');
+    $('.mobile-menu-toggler').toggleClass('mobile-menu-toggler--active');
+  });
+}
+
 function initSlickSlider() {
 	$('.slider').slick({
 		infinite: true,
@@ -72,7 +80,7 @@ function initTabs() {
 function initProductGallery() {
 	$('.picture-small').click(function(event) {
 
-		$('.picture-small').removeClass('current');
+		$(this).closest('.gallery').find('.picture-small').removeClass('current');
 		$(this).addClass('current');
 
 		$(this).closest('.gallery').children('.picture-main').attr('src', $(this).attr('src'));
@@ -127,7 +135,7 @@ function selectPrice() {
 
 function showHidePromos() {
 	$('.promos').mouseover(function() {
-		$('.actions').css('display', 'flex');
+		$('.actions').css('display', 'grid');
 	})
 
 	$('.promos').mouseout(function() {

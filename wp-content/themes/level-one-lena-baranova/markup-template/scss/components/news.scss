@@ -9,8 +9,21 @@
 	}
 
 	&-block {
-		display: flex;
+		display: grid;
+		grid-template-columns: repeat(4, $newsWidth);
 		justify-content: space-between;
+
+		@include media("<=desktop") {
+			grid-template-columns: repeat(2, $newsWidth);
+			grid-row-gap: 50px;
+			grid-column-gap: 13%;
+			justify-content: center;
+		}
+
+		@include media("<=phone") {
+			grid-template-columns: $newsWidth;
+			grid-column-gap: 0;
+		}
 	}
 
 	&-one {

@@ -72,14 +72,14 @@ $bc-for-header-menu: #f9f9f9;
 .nav-drop {
 	transition: all 0.25s linear;
 
-	@include media("<=tablet") {
-		position: absolute;
-		top: 100%;
-		left: 0;
-		width: 100%;
-		overflow: hidden;
-		max-height: 0;
-	}
+	// @include media("<=tablet") {
+	// 	position: absolute;
+	// 	top: 100%;
+	// 	left: 0;
+	// 	width: 100%;
+	// 	overflow: hidden;
+	// 	max-height: 0;
+	// }
 }
 
 // .nav-active {
@@ -115,18 +115,43 @@ $bc-for-header-menu: #f9f9f9;
 .nav {
 	transition: all 0.25s linear;
 
+	@include media("<=md-desktop") {
+		display: none;
+	}
+
+	&.nav-mobile {
+		@include media("<=md-desktop") {
+			display: block;
+		}
+	}
+
 	&.dark .menu-link {
 		color: #000;
+
+		@include media("<=md-desktop") {
+			color: #fff;
+		}
 	}
 
 	&.light .menu-link{
 		color: #fff;
 	}
 
-	@include media("<=tablet") {
-		transform: translateY(-100%);
-		// background-color: $bc-for-header-menu;
+	& .menu-link {
+
+		&:first-child {
+			padding-left: 0;
+		}
+
+		&:last-child {
+			padding-right: 0;
+		}
 	}
+
+	// @include media("<=tablet") {
+	// 	transform: translateY(-100%);
+	// 	// background-color: $bc-for-header-menu;
+	// }
 
 	ul {
 		margin: 0;
@@ -134,10 +159,6 @@ $bc-for-header-menu: #f9f9f9;
 		list-style: none;
 		display: flex;
 		justify-content: space-between;
-
-		@include media("<=tablet") {
-			display: block;
-		}
 	}
 
 	li {
@@ -156,11 +177,11 @@ $bc-for-header-menu: #f9f9f9;
 			background-color:#d0f7f7;
 			box-shadow: 0 0 3px 0 rgba(0, 0, 0, .2);
 
-			@include media("<=tablet") {
+			@include media("<=md-desktop") {
 				box-shadow: none;
 			}
 
-			@include media("<=tablet") {
+			@include media("<=md-desktop") {
 				position: static;
 			}
 
@@ -180,7 +201,7 @@ $bc-for-header-menu: #f9f9f9;
 				border-style: dashed dashed dashed solid;
 				border-color: transparent transparent transparent #7d7d7d;
 
-				@include media("<=tablet") {
+				@include media("<=md-desktop") {
 					width: 25px;
 					height: 25px;
 					right: 15px;
@@ -194,7 +215,7 @@ $bc-for-header-menu: #f9f9f9;
 				}
 
 				&:before {
-					@include media("<=tablet") {
+					@include media("<=md-desktop") {
 						content: "+";
 						color: #fff;
 					}
@@ -216,7 +237,6 @@ $bc-for-header-menu: #f9f9f9;
 		font-size: 13px;
 		line-height: 2;
 		letter-spacing: 0.78px;
-		color: #fff;
 
 		&:hover,
 		&.highlighted {

@@ -7,6 +7,21 @@
 		<main class="main">
 			<section class="navigation" id="navigation">
 				<div class="container">
+					<button
+						type="button"
+						class="mobile-menu"
+					>
+						<img
+							class="mobile-menu-toggler mobile-menu-toggler--active"
+							src="img/burger-dark.svg"
+							alt="menu"
+						>
+						<img
+							class="mobile-menu-toggler"
+							src="img/cross-white.svg"
+							alt="menu"
+						>
+					</button>
 					<div class="nav-drop">
 						<nav class="nav dark">
 							<ul class="menu header-menu">
@@ -213,123 +228,126 @@
 						</div>
 
 						<div class="product-info">
-							<h1 class="product-name">
-								1st Edition Essential Oils Animal<br> Desk Reference
-							</h1>
-							<div class="reviews">
-								<img
-									class="stars"
-									src="img/stars.png"
-									alt="5 stars"
-								>
-								<a href="" class="reviews-count">4 reviews</a>
-								<button type="button" class="reviews-new">
-									<i class="fas fa-pencil-alt"></i>
-									Write a review
-								</button>
+							<div>
+								<h1 class="product-name">
+									1st Edition Essential Oils Animal<br> Desk Reference
+								</h1>
+								<div class="reviews">
+									<img
+										class="stars"
+										src="img/stars.png"
+										alt="5 stars"
+									>
+									<a href="" class="reviews-count">4 reviews</a>
+									<button type="button" class="reviews-new">
+										<i class="fas fa-pencil-alt"></i>
+										Write a review
+									</button>
+								</div>
+								<p class="mark">In stock</p>
+								<p class="product-text">
+									The long anticipated Essential Oils Animal Desk Reference
+									is here! This amazing, full color work is packed full of
+									invaluable, never before seen information on how to use
+									essential oils with your animals.
+								</p>
 							</div>
-							<p class="mark">In stock</p>
-							<p class="product-text">
-								The long anticipated Essential Oils Animal Desk Reference
-								is here! This amazing, full color work is packed full of
-								invaluable, never before seen information on how to use
-								essential oils with your animals.
-							</p>
 
-							<form
-								class="order"
-								action=""
-								method="GET"
-							
-							>
-								<div class="prices">
-									<div class="prices-choice">
-										<label class="price-label">
-											<input
-												type="radio"
-												name="price"
-												value="150.00"
-											>
-											<div class="price-types">
-												<p class="card-retail colored card-circle">
-													<sup>$</sup>150.00
-												</p>
-												<p class="price-type">Retail</p>
-											</div>
-										</label>
+							<div>
+								<form
+									class="order"
+									action=""
+									method="GET"
+								>
+									<div class="prices">
+										<div class="prices-choice">
+											<label class="price-label">
+												<input
+													type="radio"
+													name="price"
+													value="150.00"
+												>
+												<div class="price-types">
+													<p class="card-retail colored card-circle">
+														<sup>$</sup>150.00
+													</p>
+													<p class="price-type">Retail</p>
+												</div>
+											</label>
 
-										<label class="price-label">
-											<input
-												type="radio"
-												name="price"
-												value="129.00"
-											>
-											<div class="price-types">
-												<p class="card-price card-circle">
-													<sup>$</sup>129.00
-												</p>
-												<p class="price-type">Price</p>
-											</div>
-										</label>
+											<label class="price-label">
+												<input
+													type="radio"
+													name="price"
+													value="129.00"
+												>
+												<div class="price-types">
+													<p class="card-price card-circle">
+														<sup>$</sup>129.00
+													</p>
+													<p class="price-type">Price</p>
+												</div>
+											</label>
 
-										<label class="price-label">
-											<input
-												type="radio"
-												name="price"
-												value="99.00"
-											>
-											<div class="price-types">
-												<p class="card-member card-circle">
-													<sup>$</sup>99.00
-												</p>
-												<p class="price-type">Member</p>
-											</div>
-										</label>
+											<label class="price-label">
+												<input
+													type="radio"
+													name="price"
+													value="99.00"
+												>
+												<div class="price-types">
+													<p class="card-member card-circle">
+														<sup>$</sup>99.00
+													</p>
+													<p class="price-type">Member</p>
+												</div>
+											</label>
+										</div>
+
+										<div class="price-tier">
+											<h4 class="price-tier-name">Tier<br> pricing</h4>
+											<p class="price-tier-low">As low as:</p>
+											<p class="price-tier-value">
+												<sup>$</sup>79.00
+											</p>
+										</div>
 									</div>
-
-									<div class="price-tier">
-										<h4 class="price-tier-name">Tier<br> pricing</h4>
-										<p class="price-tier-low">As low as:</p>
-										<p class="price-tier-value">
-											<sup>$</sup>79.00
-										</p>
+									<div class="purchase">
+										<div class="counter">
+											<button type="button" class="minus">-</button>
+											<input
+												type="number"
+												class="count"
+												name="count"
+												value="1"
+											>
+											<button type="button" class="plus">+</button>
+										</div>
+										<button type="submit" class="purchase-buy">Add to cart</button>
 									</div>
-								</div>
-								<div class="purchase">
-									<div class="counter">
-										<button type="button" class="minus">-</button>
-										<input
-											type="number"
-											class="count"
-											name="count"
-											value="1"
-										>
-										<button type="button" class="plus">+</button>
-									</div>
-									<button type="submit" class="purchase-buy">Add to cart</button>
-								</div>
-							</form>
+								</form>
 
-							<div class="product-share">
-								<p class="share">Share</p>
-								<div class="share-icons">
-									<a href="https://mail.google.com" class="share-icon">
-										<i class="fas fa-envelope"></i>
-									</a>
-									<a href="https://facebook.com" class="share-icon">
-										<i class="fab fa-facebook-square"></i>
-									</a>
-									<a href="https://twitter.com" class="share-icon">
-										<i class="fab fa-twitter-square"></i>
-									</a>
-									<a href="https://plus.google.com" class="share-icon">
-										<i class="fab fa-google-plus-square"></i>
-									</a>
-									<a href="https://www.pinterest.com" class="share-icon">
-										<i class="fab fa-pinterest-square"></i>
-									</a>
+								<div class="product-share">
+									<p class="share">Share</p>
+									<div class="share-icons">
+										<a href="https://mail.google.com" class="share-icon">
+											<i class="fas fa-envelope"></i>
+										</a>
+										<a href="https://facebook.com" class="share-icon">
+											<i class="fab fa-facebook-square"></i>
+										</a>
+										<a href="https://twitter.com" class="share-icon">
+											<i class="fab fa-twitter-square"></i>
+										</a>
+										<a href="https://plus.google.com" class="share-icon">
+											<i class="fab fa-google-plus-square"></i>
+										</a>
+										<a href="https://www.pinterest.com" class="share-icon">
+											<i class="fab fa-pinterest-square"></i>
+										</a>
+									</div>
+									<button type="button" class="share-wishlist">Add to wishlist</button>
 								</div>
-								<button type="button" class="share-wishlist">Add to wishlist</button>
 							</div>
 						</div>
 					</div>

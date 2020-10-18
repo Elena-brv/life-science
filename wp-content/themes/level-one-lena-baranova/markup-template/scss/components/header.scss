@@ -93,24 +93,31 @@
 	}
 }
 
-
-
 .panel {
-	height: 65px;
-	background-color: #e9f8fe;
 	position: relative;
 	z-index: 1;
+	background-color: #e9f8fe;
 
-	& .container {
+	&-container {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		@include media("<=desktop") {
+			flex-direction: column;
+			padding-bottom: 10px;
+		}
+
 	}
 }
 
 .logotype {
 	display: flex;
 	align-items: center;
+
+	@include media("<=desktop") {
+		align-self: flex-start;
+	}
 }
 
 .logo {
@@ -119,6 +126,11 @@
 	position: relative;
 	top: -15px;
 	margin-right: 49px;
+
+	@include media("<=sm-phone") {
+		width: 150px;
+		height: 44px;
+	}
 }
 
 .slogan {
@@ -127,6 +139,10 @@
 	width: 140px;
 	display: flex;
 	flex-direction: column;
+
+	@include media("<=sm-phone") {
+		display: none;
+	}
 
 	&::before {
 		content: "";
@@ -158,10 +174,19 @@
 
 .search {
 	display: flex;
+	align-items: center;
+
+	@include media("<=desktop") {
+		margin-top: 10px;
+		align-self: flex-end;
+	}
+
+	@include media("<=sm-phone") {
+		margin-top: 0;
+	}
 }
 
 .search-form {
-	display: flex;
 	position: relative;
 }
 
@@ -171,6 +196,10 @@
 	padding-left: 9px;
 	border: none;
 	border-radius: 5px;
+
+	@include media("<=sm-phone") {
+		width: 150px;
+	}
 
 	&::placeholder {
 		color: #acacac;
@@ -208,4 +237,8 @@
 	letter-spacing: -0.4px;
 
 	color: #555555;
+
+	@include media("<=sm-phone") {
+		font-size: 16px;
+	}
 }
