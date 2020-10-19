@@ -24,10 +24,12 @@
 	&-item {
 		margin-right: 50px;
 		position: relative;
-		color: #0072bc;
+		color: $links-color;
 		font-size: 12px;
 		text-decoration: none;
 		text-transform: uppercase;
+
+		@include hover(text-shadow, 1px 0 0 $links-color);
 
 		@include media("<=phone") {
 			display: inline-block;
@@ -35,12 +37,8 @@
 			margin-right: 0;
 		}
 
-		&:hover {
-			font-weight: 700;
-		}
-
 		&.active {
-			font-weight: 700;
+			text-shadow: 0.7px 0 0 $links-color;
 
 			&::after {
 				content: "";
@@ -49,7 +47,7 @@
 				position: absolute;
 				left: 0;
 				bottom: -8px;
-				background-color: #fad482;
+				background-color:$strip-color-main;
 			}
 		}
 	}

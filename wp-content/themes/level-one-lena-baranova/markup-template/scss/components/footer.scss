@@ -35,7 +35,9 @@
 		margin-top: 40px;
 		font-size: 22px;
 		font-weight: 600;
-		color: #fff;
+		color: $white;
+
+		@include hover(color, #7ba4b7);
 
 		@include media("<=desktop") {
 			margin-top: 0;
@@ -76,7 +78,7 @@
 .address {
 	margin-top: 20px;
 	color: #6f6f6f;
-	font-size: 13px;
+	font-size: $font-size-base;
 	line-height: 1.3;
 	letter-spacing: -0.5px;
 
@@ -121,7 +123,7 @@
 	&-heading {
 		margin-bottom: 14px;
 		font-size: 12px;
-		color: #fff;
+		color: $white;
 		text-transform: uppercase;
 
 		@include media("<=sm-phone") {
@@ -141,6 +143,8 @@
 		color: #7ba4b7;
 		font-size: 12px;
 		letter-spacing: -0.1px;
+
+		@include hover(color, $white);
 	}
 }
 
@@ -169,6 +173,8 @@
 	margin-bottom: 55px;
 	text-align: right;
 
+	@include hover(transform, rotate(5deg));
+
 	@include media("<=desktop") {
 		margin-bottom: 0;
 	}
@@ -189,7 +195,6 @@
 	color: #454547;
 	font-size: 17px;
 
-
 	& span {
 		color: #92bc25;
 		font-style: italic;
@@ -202,7 +207,7 @@
 	font-size: 10px;
 	line-height: 1.4;
 	letter-spacing: 0.2;
-	color: #c2c2c2;
+	color: $second-text-color;
 
 	@include media("<=sm-phone") {
 		text-align: center;

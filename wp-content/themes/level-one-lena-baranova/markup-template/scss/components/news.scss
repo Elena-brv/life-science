@@ -4,7 +4,7 @@
 	text-align: center;
 
 	&-heading {
-		@include h2Heading(#fad482);
+		@include h2Heading($strip-color-main);
 		margin-bottom: 35px;
 	}
 
@@ -34,6 +34,8 @@
 	&-picture {
 		width: $newsWidth;
 		height: $newsWidth;
+
+		@include hover(transform, scale(1.07));
 	}
 
 	&-name {
@@ -60,11 +62,15 @@
 
 		border: none;
 		border-radius: 20px;
-		background-color: #84d5d8;
+		background-color: $strip-color-second;
 
-		font-family: "Lato-Semibold", sans-serif;
+		@include hover(box-shadow, 0 0 15px $strip-color-second);
+	}
+
+	&-link {
 		font-size: 16px;
+		font-weight: 600;
 		text-transform: uppercase;
-		color: #fff;
+		color: $white;
 	}
 }

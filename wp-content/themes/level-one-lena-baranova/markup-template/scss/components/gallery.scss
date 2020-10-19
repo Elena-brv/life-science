@@ -19,35 +19,29 @@
 .picture {
 
 	&-small {
-		$smallPictureSize: 80px;
-		width: $smallPictureSize;
-		height: $smallPictureSize;
+		@include size(80px);
 
 		margin-bottom: 8px;
 
 		border: 1px solid #b7b7b7;
 		cursor: pointer;
 
+		@include hover(transform, scale(1.05));
+
 		&.current {
 			border: 3px solid #b7b7b7;
 		}
 
 		@include media("<=sm-phone") {
-			$smallPictureSize: 40px;
-			width: $smallPictureSize;
-			height: $smallPictureSize;
+			@include size(40px);
 		}
 	}
 
 	&-main {
-		$pictureSize: 444px;
-		width: $pictureSize;
-		height: $pictureSize;
+		@include size(444px);
 
 		@include media("<=md-desktop") {
-			$pictureSize: 420px;
-			width: $pictureSize;
-			height: $pictureSize;
+			@include size(420px);
 		}
 
 		@include media("<=desktop") {
@@ -59,21 +53,11 @@
 		}
 
 		@include media("<=phone") {
-			$pictureSize: 320px;
-			width: $pictureSize;
-			height: $pictureSize;
+			@include size(320px);
 		}
 
-		// @include media("<=phone") {
-		// 	$pictureSize: 300px;
-		// 	width: $pictureSize;
-		// 	height: $pictureSize;
-		// }
-
 		@include media("<=sm-phone") {
-			$pictureSize: 220px;
-			width: $pictureSize;
-			height: $pictureSize;
+			@include size(220px);
 		}
 	}
 }

@@ -5,7 +5,7 @@
 	position: relative;
 
 	&-heading {
-		@include h2Heading(#84d5d8);
+		@include h2Heading($strip-color-second);
 		margin-bottom: 37px;
 	}
 }

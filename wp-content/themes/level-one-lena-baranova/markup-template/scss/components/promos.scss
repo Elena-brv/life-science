@@ -4,7 +4,7 @@
 	background-color: #ebebeb;
 
 	&-heading {
-		@include h2Heading(#84d5d8);
+		@include h2Heading($strip-color-second);
 		margin-bottom: 51px;
 	}
 }
@@ -37,5 +37,7 @@
 	&-picture {
 		width: 320px;
 		height: 180px;
+
+		@include hover(transform, scale(1.03));
 	}
 }

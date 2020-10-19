@@ -58,7 +58,7 @@
 	}
 
 	&-only {
-		color: #c2c2c2;
+		color: $second-text-color;
 		font-size: 14px;
 		text-transform: uppercase;
 		letter-spacing: -0.24px;
@@ -104,8 +104,6 @@
 
 		&-arrow {
 			font-size: 0;
-			background-color: transparent;
-			border: none;
 			position: absolute;
 			top: calc(50% - 34px);
 			z-index: 1;
@@ -135,17 +133,14 @@
 
 			& button {
 				font-size: 0;
-				$dotSize: 14px;
-				width: $dotSize;
-				height: $dotSize;
-				background-color: transparent;
-				border: 1px solid #fff;
+				@include size(14px);
+				border: 1px solid $white;
 				border-radius: 50%;
 				margin: 0 4.5px;
 			}
 
 			& .slick-active button {
-				background-color: #fff;
+				background-color: $white;
 			}
 		}
 	}
@@ -169,19 +164,15 @@
 	}
 
 	&-background {
-		background-color: #fff;
-		$itemSize: 381px;
-		width: $itemSize;
-		height: $itemSize;
+		background-color: $white;
+		@include size(381px);
 		border-radius: 50%;
 		position: absolute;
 		top: 0;
 		z-index: -1;
 
 		@include media("<=desktop") {
-			$itemSize: 293px;
-			width: $itemSize;
-			height: $itemSize;
+			@include size(293px);
 		}
 	}
 }

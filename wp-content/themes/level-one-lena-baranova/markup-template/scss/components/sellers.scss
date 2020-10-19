@@ -4,8 +4,7 @@
 	position: relative;
 
 	&-heading {
-		@include h2Heading(#fad482);
+		@include h2Heading($strip-color-main);
 		margin-bottom: 37px;
 	}
 }
-

@@ -19,7 +19,6 @@ $cardWidth: 220px;
 }
 
 .card {
-	$circleSize: 60px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -30,6 +29,8 @@ $cardWidth: 220px;
 		height: $cardWidth;
 		border: 0.5px solid #959595;
 		cursor: pointer;
+
+		@include hover(transform, scale(1.07));
 	}
 
 	&-name {
@@ -55,6 +56,7 @@ $cardWidth: 220px;
 	}
 
 	&-circle {
+		$circleSize: 60px;
 		width: $circleSize;
 		height: $circleSize;
 		border-radius: 50%;
@@ -71,9 +73,9 @@ $cardWidth: 220px;
 	}
 
 	&-retail {
-		color: #7d7d7d;
+		color: $gray;
 		text-decoration: line-through;
-		background-color: #fff;
+		background-color: $white;
 
 		&.colored {
 			background-color: #ebebeb;
@@ -81,13 +83,13 @@ $cardWidth: 220px;
 	}
 
 	&-price {
-		color: #7d7d7d;
-		background-color: #fad482;
+		color: $gray;
+		background-color: $strip-color-main;
 	}
 
 	&-member {
-		color: #fff;
-		background-color: #84d5d8;
+		color: $white;
+		background-color: $strip-color-second;
 	}
 }
 
@@ -96,12 +98,11 @@ $cardWidth: 220px;
 	&-types {
 		display: flex;
 		flex-direction: column;
-		// margin: 0 5px;
 	}
 
 	&-type {
 		margin-top: 7px;
-		color: #7d7d7d;
+		color: $gray;
 		font-size: 10px;
 		text-transform: uppercase;
 	}
@@ -117,10 +118,12 @@ $cardWidth: 220px;
 	letter-spacing: 0.32px;
 	text-transform: uppercase;
 
-	color: #fff;
+	color: $white;
 	border-radius: 20px;
-	background-color: #8dc63f;
+	background-color: $btn-bg-color;
 	border: none;
+
+	@include hover(box-shadow, 0 0 10px $btn-bg-color);
 }
 
 .wishlist {
@@ -132,12 +135,7 @@ $cardWidth: 220px;
 	letter-spacing: 0.24px;
 	text-transform: uppercase;
 
-	color: #0072bc;
-	background-color: transparent;
-	border: none;
-}
+	color: $links-color;
 
-// .order {
-// 	display: flex;
-// 	flex-direction: column;
-// }
+	@include hover(color, #004472);
+}

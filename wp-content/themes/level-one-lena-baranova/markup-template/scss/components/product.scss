@@ -1,6 +1,5 @@
 .product {
 	margin-top: 42px;
-	// width: 100%;
 
 	&-name {
 		margin-bottom: 9px;
@@ -97,6 +96,8 @@
 		letter-spacing: 0.66px;
 		text-transform: uppercase;
 
+		@include hover(color, #464646);
+
 		&:not(.active)::after {
 			content: "\a0››\a0";
 			position: relative;
@@ -104,7 +105,7 @@
 		}
 
 		&.active {
-			color:  #464646;
+			color: #464646;
 		}
 	}
 }
@@ -120,10 +121,12 @@
 
 	&-count {
 		margin-right: 24px;
-		color: #0072bc;
-		font-size: 13px;
+		color: $links-color;
+		font-size: $font-size-base;
 		font-weight: 400;
 		letter-spacing: -0.26px;
+
+		@include hover(color, #004472);
 
 		@include media("<=desktop") {
 			margin-right: 15px;
@@ -132,14 +135,13 @@
 
 	&-new {
 		padding: 0;
-		color: #0072bc;
+		color: $links-color;
 		font-weight: 600;
 		font-size: 12px;
 		letter-spacing: 0.24px;
 		text-transform: uppercase;
 
-		background-color: transparent;
-		border: none;
+		@include hover(color, #004472);
 	}
 }
 
@@ -150,7 +152,7 @@
 }
 
 .fa-pencil-alt {
-	color: #7d7d7d;
+	color: $gray;
 	font-family: "Font Awesome 5 Free Solid";
 	font-size: 12px;
 	font-weight: 400;
@@ -162,14 +164,14 @@
 	padding: 5px 6px;
 	margin-bottom: 25px;
 
-	color: #ffffff;
+	color: $white;
 	font-size: 11px;
 	font-weight: 400;
 	letter-spacing: -0.22px;
 	text-transform: uppercase;
 
 	border-radius: 5px;
-	background-color: #8dc63f;
+	background-color: $btn-bg-color;
 }
 
 .prices {
@@ -179,10 +181,6 @@
 	align-items: center;
 	text-align: center;
 
-	// @include media("<=desktop") {
-	// 	max-width: none;
-	// 	width: 410px;
-	// }
 	@include media("<=sm-phone") {
 		flex-direction: column;
 		width: 100%;
@@ -193,7 +191,6 @@
 		justify-content: space-between;
 		min-width: 286px;
 	}
-
 }
 
 input[type=radio] {
@@ -203,9 +200,7 @@ input[type=radio] {
 .price-label {
 	cursor: pointer;
 
-	&:hover {
-		transform: scale(1.1);
-	}
+	@include hover(transform, scale(1.1));
 }
 
 .price-types.selected {
@@ -213,9 +208,7 @@ input[type=radio] {
 }
 
 .price-tier {
-	$tierSize: 110px;
-	width: $tierSize;
-	height: $tierSize;
+	@include size(110px);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -231,7 +224,7 @@ input[type=radio] {
 		margin-bottom: 9px;
 
 		color: #707070;
-		font-size: 13px;
+		font-size: $font-size-base;
 		font-weight: 400;
 		text-transform: uppercase;
 		letter-spacing: -0.26px;
@@ -239,8 +232,8 @@ input[type=radio] {
 	}
 
 	&-low {
-		color: #c2c2c2;
-		font-size: 13px;
+		color: $second-text-color;
+		font-size: $font-size-base;
 	}
 
 	&-value {
@@ -279,7 +272,7 @@ input[type=radio] {
 		width: 276px;
 		height: 40px;
 
-		color: #fff;
+		color: $white;
 		font-size: 18px;
 		font-weight: 600;
 		letter-spacing: 0.36px;
@@ -287,7 +280,9 @@ input[type=radio] {
 
 		border: none;
 		border-radius: 20px;
-		background-color: #8dc63f;
+		background-color: $btn-bg-color;
+
+		@include hover(box-shadow, 0 0 10px $btn-bg-color);
 	}
 }
 
@@ -306,12 +301,10 @@ input[type=radio] {
 		width: 32px;
 		height: 35px;
 
-		color: #7d7d7d;
+		color: $gray;
 		font-size: 21px;
 
-		border-top: none;
-		border-bottom: none;
-		background-color: transparent;
+		@include hover(color, $black);
 	}
 }
 
@@ -347,7 +340,7 @@ input[type=number] {
 .share {
 	margin-right: 20px;
 
-	color: #7d7d7d;
+	color: $gray;
 	font-size: 12px;
 	font-weight: 600;
 	letter-spacing: 0.24px;
@@ -373,19 +366,20 @@ input[type=number] {
 		font-size: 20px;
 		font-weight: 400;
 
+		@include hover(color, $black);
+
 		&:not(:last-child) {
 			margin-right: 15px;
 		}
 	}
 
 	&-wishlist {
-		color: #0072bc;
+		color: $links-color;
 		font-size: 12px;
 		font-weight: 600;
 		letter-spacing: 0.24px;
 		text-transform: uppercase;
 
-		border: none;
-		background-color: transparent;
+		@include hover(color, #004472);
 	}
 }

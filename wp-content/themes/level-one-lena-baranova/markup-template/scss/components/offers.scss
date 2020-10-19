@@ -9,7 +9,7 @@
 		position: relative;
 		font-family: "Patua One", cursive;
 		font-size: 24px;
-		color: #7d7d7d;
+		color: $gray;
 		text-align: center;
 		letter-spacing: 0.48px;
 
@@ -21,7 +21,7 @@
 			position: absolute;
 			bottom: -11px;
 			left: calc(50% - #{$stripWidth / 2});
-			background-color: #fad482;
+			background-color:$strip-color-main;
 		}
 	}
 }

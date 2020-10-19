@@ -10,13 +10,39 @@
 		position: relative;
 		z-index: 20;
 		top: 30px;
-		left: 150px;
-		background-color: #fff;
+		left: calc((100vw - 1300px) / 2 + 110px);
+		background-color: $white;
 		border-radius: 5px;
 
+		@include media("<=1299px") {
+			left: calc(5vw);
+		}
+
+		@include media("<=xs-phone") {
+			left: 1vw;
+		}
+
 		& .container {
-			padding: 30px 40px 0 40px;
-			max-width: 1100px;
+			padding: 30px 40px 0;
+			max-width: 1080px;
+
+			@include media("<=1299px") {
+				width: 90vw;
+				padding-left: 15px;
+				padding-right: 15px;
+				max-width: none;
+			}
+
+			@include media("<=tablet") {
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+
+			@include media("<=xs-phone") {
+				padding-left: 5px;
+				padding-right: 5px;
+				width: 100vw;
+			}
 		}
 	}
 
@@ -25,11 +51,17 @@
 		right: -43px;
 		top: -55px;
 
-		background-color: transparent;
-		color: #fff;
-		border: none;
+		color: $white;
 		font-size: 60px;
 		font-weight: 100;
+
+		@include media("<=desktop") {
+			font-size: 40px;
+			right: 0;
+			top: 0;
+
+			color: $black;
+		}
 	}
 
 	& .about {
@@ -40,16 +72,6 @@
 		position: relative;
 		display: flex;
 		justify-content: space-between;
-
-		// &::after {
-		// 	content: "";
-		// 	width: 100%;
-		// 	height: 1px;
-		// 	position: absolute;
-		// 	left: 0;
-		// 	bottom: -9px;
-		// 	background-color: #ccc;
-		// }
 	}
 }
 
@@ -64,7 +86,6 @@
 	z-index: 10;
 }
 
-
 .more-link {
 	position: absolute;
 	top: -6px;
@@ -73,13 +94,21 @@
 	padding: 5px 10px;
 	border: 1px solid #ccc;
 
-	color: #0072bc;
+	color: $links-color;
 	font-size: 12px;
 	text-decoration: none;
 	text-transform: uppercase;
 	font-weight: 600;
 
-	&:hover {
-		border: 1px solid #000;
+	@include hover(border, 1px solid $black);
+
+	@include media("<=tablet") {
+		top: 85%;
+		right: 10px;
+	}
+
+	@include media("<=phone") {
+		top: 93%;
+		right: 10px;
 	}
 }

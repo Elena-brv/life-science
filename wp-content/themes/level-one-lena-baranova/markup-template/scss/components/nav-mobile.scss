@@ -4,7 +4,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #000;
+  background-color: $black;
   opacity: 0.8;
 	z-index: 2;
 
@@ -40,9 +40,6 @@
 	@include media("<=md-desktop") {
 		display: block;
 	}
-	// @media (max-width: $mobileBreakPoint) {
-	// 	display: block;
-	// }
 
 	&-toggler {
 		width: 30px;
