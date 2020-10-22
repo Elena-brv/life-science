@@ -1,10 +1,12 @@
+$container-max-width: 1300px;
+
 .container {
-	max-width: 1300px;
+	max-width: $container-max-width;
 	margin: 0 auto;
 	padding-left: 150px;
 	padding-right: 150px;
 
-	@include media("<=1299px") {
+	@include media("<=#{$container-max-width}") {
 		padding-left: 5vw;
 		padding-right: 5vw;
 	}

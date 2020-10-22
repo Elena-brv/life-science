@@ -2,11 +2,19 @@
   width: 100vw;
   height: 100vh;
   position: absolute;
-  top: 0;
+  top: -68px;
   left: 0;
   background-color: $black;
-  opacity: 0.8;
+  opacity: 0.9;
 	z-index: 2;
+
+	@include media("<=desktop") {
+		top: -56px;
+	}
+
+	@include media("<=phone") {
+		top: -98px;
+	}
 
 	& .menu {
 		display: flex;
@@ -31,19 +39,25 @@
 .mobile-menu {
 	display: none;
 	position: absolute;
-	top: 12px;
-	right: 5vw;
-	border: none;
-	background: none;
+	top: -50px;
+	right: 3vw;
 	z-index: 3;
 
 	@include media("<=md-desktop") {
 		display: block;
 	}
 
+	@include media("<=desktop") {
+		top: -43px;
+	}
+
+	@include media("<=phone") {
+		top: -87px;
+	}
+
 	&-toggler {
-		width: 30px;
-		height: 30px;
+		width: 25px;
+		height: 25px;
 		display: none;
 		cursor: pointer;
 

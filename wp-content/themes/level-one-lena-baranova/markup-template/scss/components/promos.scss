@@ -6,11 +6,12 @@
 	&-heading {
 		@include h2Heading($strip-color-second);
 		margin-bottom: 51px;
+		cursor: pointer;
 	}
 }
 
 .actions {
-	display: none;
+	display: grid;
 	justify-content: space-between;
 	grid-template-columns: repeat(3, 320px);
 

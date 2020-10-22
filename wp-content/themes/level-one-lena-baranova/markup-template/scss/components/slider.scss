@@ -1,35 +1,45 @@
+
+
 .slider {
 	position: relative;
-	left: 53%;
+	margin-top: 128px;
+	float: right;
 	width: 449px;
 	overflow: hidden;
 
-	@include media("<=desktop") {
-		top: -100px;
-		left: 48%;
+	@include media("<=md-desktop") {
+		margin-top: 165px;
+	}
 
+	@include media("<=desktop") {
 		width: 350px;
 	}
 
 	@include media("<=tablet") {
-		top: 60px;
-		left: 5vw;
+		float: left;
+		margin-top: 195px;
 	}
 
 	@include media("<=sm-phone") {
-		display: none;
+		width: 285px;
 	}
 
 	&-item {
-		margin: 0 auto;
-		background-image: url("../img/blend.png");
-		background-repeat: no-repeat;
-		background-size: contain;
 		height: 381px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		&:focus {
+			outline: none;
+		}
 
 		@include media("<=desktop") {
 			height: 293px;
-			margin-left: 28px;
+		}
+
+		@include media("<=sm-phone") {
+			height: 250px;
 		}
 	}
 
@@ -38,12 +48,22 @@
 		color: #464646;
 		font-family: "Patua One";
 		font-size: 27px;
+		font-weight: 400;
 		text-align: center;
 		line-height: 1.1;
 
 		@include media("<=desktop") {
 			font-size: 24px;
 		}
+
+		@include media("<=sm-phone") {
+			font-size: 18px;
+			padding-top: 30px;
+		}
+	}
+
+	&-info {
+		position: relative;
 	}
 
 	&-proposal {
@@ -54,6 +74,11 @@
 		@include media("<=desktop") {
 			max-width: 130px;
 			margin-left: 144px;
+			margin-top: 15px;
+		}
+
+		@include media("<=sm-phone") {
+			margin-left: 120px;
 		}
 	}
 
@@ -69,6 +94,7 @@
 		color: #0054a6;
 		font-size: 59px;
 		letter-spacing: -0.4px;
+		line-height: normal;
 
 		@include media("<=desktop") {
 			font-size: 35px;
@@ -105,11 +131,16 @@
 		&-arrow {
 			font-size: 0;
 			position: absolute;
-			top: calc(50% - 34px);
+			top: calc(50% - 39px);
 			z-index: 1;
 			width: 19px;
 			height: 34px;
 			cursor: pointer;
+
+			@include media("<=sm-phone") {
+				width: 15px;
+				height: 27px;
+			}
 
 			&:focus {
 				outline: none;
@@ -118,10 +149,12 @@
 
 		&-prev {
 			background: url("../img/left_arrow.png") 0 0 no-repeat;
+			background-size: contain;
 		}
 
 		&-next {
 			background: url("../img/right_arrow.png") 0 0 no-repeat;
+			background-size: contain;
 			right: 0;
 		}
 
@@ -137,6 +170,8 @@
 				border: 1px solid $white;
 				border-radius: 50%;
 				margin: 0 4.5px;
+				padding: 0;
+				line-height: 0;
 			}
 
 			& .slick-active button {
@@ -149,30 +184,44 @@
 .phone {
 
 	&-picture{
-		width: 243px;
+		width: 230px;
 		height: 277px;
 		position: absolute;
-		left: 24px;
-		bottom: 12px;
+		left: 33px;
+    top: -10px;
 
 		@include media("<=desktop") {
-			width: 176px;
+			width: 165px;
 			height: 200px;
-			left: 10px;
-			bottom: 20px;
+			left: 18px;
+		}
+
+		@include media("<=sm-phone") {
+			width: 140px;
+			height: 170px;
+			top: 0;
+			left: 15px;
 		}
 	}
+}
 
-	&-background {
-		background-color: $white;
+.background {
+	background-color: $white;
+	height: 100%;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	z-index: -1;
+
+	&-pic {
 		@include size(381px);
-		border-radius: 50%;
-		position: absolute;
-		top: 0;
-		z-index: -1;
 
 		@include media("<=desktop") {
 			@include size(293px);
+		}
+
+		@include media("<=sm-phone") {
+			@include size(250px);
 		}
 	}
 }

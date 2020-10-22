@@ -170,18 +170,26 @@
 }
 
 .networks {
+	width: 132px;
+	height: 38px;
+
+	display: flex;
+	justify-content: space-between;
 	margin-bottom: 55px;
 	text-align: right;
-
-	@include hover(transform, rotate(5deg));
 
 	@include media("<=desktop") {
 		margin-bottom: 0;
 	}
+
+	&-icon {
+		@include size(38px);
+		@include hover(transform, scale(1.1));
+	}
 }
 
 .past {
-	font-size: 14px;
+	font-size: 16px;
 	color: #454547;
 	margin-bottom: 3px;
 
@@ -193,7 +201,7 @@
 .now {
 	margin-bottom: 16px;
 	color: #454547;
-	font-size: 17px;
+	font-size: 22px;
 
 	& span {
 		color: #92bc25;
@@ -204,7 +212,7 @@
 
 .copyrights {
 	text-align: right;
-	font-size: 10px;
+	font-size: 11px;
 	line-height: 1.4;
 	letter-spacing: 0.2;
 	color: $second-text-color;

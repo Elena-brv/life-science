@@ -34,13 +34,14 @@
 	&-picture {
 		width: $newsWidth;
 		height: $newsWidth;
+		border: 1px solid #ccc;
+		border-radius: 50%;
 
 		@include hover(transform, scale(1.07));
 	}
 
 	&-name {
 		margin-top: 16px;
-		font-family: "Lato", sans-serif;
 		font-size: 18px;
 		line-height: 21px;
 		font-weight: 600;
@@ -55,22 +56,24 @@
 	}
 
 	&-more {
+		display: block;
+		// align-items: center;
+		// justify-content: center;
 		width: 100%;
 		height: 40px;
+		line-height: 40px;
 
 		margin-top: 22px;
+
+		font-size: 16px;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: $white;
 
 		border: none;
 		border-radius: 20px;
 		background-color: $strip-color-second;
 
 		@include hover(box-shadow, 0 0 15px $strip-color-second);
-	}
-
-	&-link {
-		font-size: 16px;
-		font-weight: 600;
-		text-transform: uppercase;
-		color: $white;
 	}
 }

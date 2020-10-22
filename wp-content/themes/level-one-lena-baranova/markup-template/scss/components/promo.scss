@@ -5,26 +5,42 @@
 	height: 1029px;
 	margin: 0 auto;
 	position: relative;
+
+	@include media("<=desktop", ">tablet") {
+		height: 800px;
+	}
+
+	& .container {
+		position: relative;
+	}
 }
 
 .phrase {
 	@include size(221px);
-	position: relative;
-	top: 146px;
-	left: 45%;
+	position: absolute;
+	top: 70px;
+	right: 496px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	background-color: rgba(253, 227, 137, 0.6);
 	border-radius: 50%;
 
+	@include media("<=#{$container-max-width}") {
+		right: calc(#{$slider-width} + 5vw - 110px);;
+	}
+
 	@include media("<=desktop") {
-		top: 36%;
-		left: 1%;
+		top: 45px;
+		right: calc(#{$slider-width-desktop} + 5vw - 110px);;
+
+	}
+
+	@include media("<=850px") {
 	}
 
 	@include media("<=tablet") {
-		top: 105px;
+		top: 30px;
 		left: 5vw;
 	}
 
@@ -34,7 +50,7 @@
 	}
 }
 
-.advertisements {
+.propositions {
 	padding: 38px 0;
 	position: absolute;
 	bottom: 0;
@@ -48,23 +64,13 @@
 
 	&-container {
 		display: grid;
-		justify-content: space-between;
-		grid-template-columns: repeat(3, 320px);
+		grid-template-columns: repeat(3, 1fr);
+		grid-column-gap: 15px;
 
 		@include media("<=desktop") {
-			grid-template-columns: repeat(auto-fill, 320px);
+			grid-template-columns: repeat(auto-fill, 220px);
 			justify-content: center;
 			grid-row-gap: 10px;
-			grid-column-gap: 5%;
-
-			.advertisement:last-child {
-				position: relative;
-				left: calc(50% + 15px);
-
-				@include media("<=tablet") {
-					left: 0;
-				}
-			}
 		}
 
 		@include media("<=tablet") {
@@ -73,13 +79,25 @@
 	}
 }
 
-.advertisement {
+.proposition {
 	width: 320px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	color: $white;
 	line-height: 1;
+
+	@include media("<=md-desktop") {
+		width: 293px;
+	}
+
+	@include media("<=desktop") {
+		width: 220px;
+	}
+
+	@include media("<=tablet") {
+		width: 280px;
+	}
 
 	@include media("<=tablet") {
 		&:last-child {
@@ -90,30 +108,48 @@
 	&-name {
 		margin-top: 11px;
 		font-family: "Patua One", cursive;
+		font-weight: 400;
 		font-size: 24px;
 		letter-spacing: -0.48px;
 
-		@include media("<=tablet") {
-			font-size: 18px;
+		@include media("<=desktop") {
+			font-size: 16px;
 		}
 	}
 
 	&-blog {
 		background-color: rgba(33, 128, 178, 0.4);
+		justify-self: start;
+
+		@include media("<=tablet") {
+			justify-self: center;
+		}
 	}
 
 	&-member {
 		background-color: rgba(17, 17, 17, 0.4);
+		justify-self: center;
 	}
 
 	&-aroma {
 		background-color: rgba(81, 118, 30, 0.5);
+		justify-self: end;
+
+		@include media("<=tablet") {
+			justify-self: center;
+		}
 	}
 }
 
 .appeal {
 	margin-top: 23px;
 	text-transform: uppercase;
+	letter-spacing: 2.34px;
+
+	@include media("<=desktop") {
+		margin-top: 10px;
+		font-size: 11px;
+	}
 }
 
 .blog-pic {
@@ -121,8 +157,9 @@
 	height: 65px;
 	margin-top: 12px;
 
-	@include media("<=tablet") {
-		display: none;
+	@include media("<=desktop") {
+		width: 64px;
+		height: 43px;
 	}
 }
 
@@ -130,10 +167,15 @@
 	display: block;
 	margin-top: 13px;
 	margin-bottom: 15px;
-	font-family: "Lato-Semibold", sans-serif;
+	font-weight: 600;
 	color: $white;
 
 	@include hover(text-shadow, 1px 0 0 $white);
+
+	@include media("<=desktop") {
+		margin-top: 10px;
+		margin-bottom: 12px;
+	}
 }
 
 .member-pic {
@@ -141,15 +183,17 @@
 	height: 74px;
 	margin-top: 12px;
 
-	@include media("<=tablet") {
-		display: none;
+	@include media("<=desktop") {
+		width: 76px;
+		height: 49px;
+		margin-top: 9px;
 	}
 }
 
 .member-link {
 	margin-top: 5px;
 	margin-bottom: 14px;
-	font-family: "Lato-Semibold", sans-serif;
+	font-weight: 600;
 	color: $white;
 
 	@include hover(text-shadow, 1px 0 0 $white);
@@ -161,7 +205,9 @@
 	margin-top: 13px;
 	margin-bottom: 19px;
 
-	@include media("<=tablet") {
-		display: none;
+	@include media("<=desktop") {
+		width: 128px;
+		height: 57px;
+		margin-bottom: 4px;
 	}
 }

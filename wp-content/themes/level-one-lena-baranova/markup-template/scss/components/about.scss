@@ -71,6 +71,7 @@
 	margin-top: 29px;
 	display: grid;
 	grid-template-columns: 420px 1fr;
+	grid-column-gap: 15px;
 
 	@include media("<=desktop") {
 		grid-template-columns: 1fr 1fr;

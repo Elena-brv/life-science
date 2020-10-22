@@ -41,7 +41,7 @@
 			@include media("<=xs-phone") {
 				padding-left: 5px;
 				padding-right: 5px;
-				width: 100vw;
+				width: 98vw;
 			}
 		}
 	}
@@ -88,11 +88,12 @@
 
 .more-link {
 	position: absolute;
-	top: -6px;
+	top: -5px;
 	right: 0;
 	display: block;
 	padding: 5px 10px;
 	border: 1px solid #ccc;
+	border-bottom: 0;
 
 	color: $links-color;
 	font-size: 12px;
@@ -105,6 +106,7 @@
 	@include media("<=tablet") {
 		top: 85%;
 		right: 10px;
+		border-bottom: 1px solid #ccc;
 	}
 
 	@include media("<=phone") {

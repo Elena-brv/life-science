@@ -103,8 +103,13 @@
 		align-items: center;
 
 		@include media("<=desktop") {
-			flex-direction: column;
+			// flex-direction: column;
 			padding-bottom: 10px;
+		}
+
+		@include media ("<=phone") {
+			flex-direction: column;
+			align-items: flex-start;
 		}
 	}
 }
@@ -112,10 +117,6 @@
 .logotype {
 	display: flex;
 	align-items: center;
-
-	@include media("<=desktop") {
-		align-self: flex-start;
-	}
 }
 
 .logo {
@@ -125,9 +126,15 @@
 	top: -15px;
 	margin-right: 49px;
 
-	@include media("<=sm-phone") {
+	@include media("<=desktop") {
 		width: 150px;
 		height: 44px;
+		margin-right: 20px;
+		top: -5px;
+	}
+
+	@include media("<=sm-phone") {
+		top: 0;
 	}
 }
 
@@ -138,7 +145,11 @@
 	display: flex;
 	flex-direction: column;
 
-	@include media("<=sm-phone") {
+	@include media("<=desktop") {
+		width: 110px;
+	}
+
+	@include media("<=xs-phone") {
 		display: none;
 	}
 
@@ -149,6 +160,10 @@
 		width: 1px;
 		height: 100%;
 		background-color: #cad2d5;
+
+		@include media("<=desktop") {
+			left: -10px;
+		}
 	}
 
 	&-simple {
@@ -157,6 +172,10 @@
 		font-weight: 300;
 		line-height: 1.1;
 		letter-spacing: 0.48px;
+
+		@include media("<=desktop") {
+			font-size: 16px;
+		}
 	}
 
 	&-emphasized {
@@ -167,6 +186,10 @@
 		color: $btn-bg-color;
 		letter-spacing: 2.2px;
 		text-transform: uppercase;
+
+		@include media("<=desktop") {
+			font-size: 13px;
+		}
 	}
 }
 
@@ -174,13 +197,16 @@
 	display: flex;
 	align-items: center;
 
-	@include media("<=desktop") {
-		margin-top: 10px;
-		align-self: flex-end;
+	@include media("<=md-desktop") {
+		padding-right: 30px;
 	}
 
-	@include media("<=sm-phone") {
-		margin-top: 0;
+	@include media("<=desktop") {
+		margin-top: 10px;
+	}
+
+	@include media("<=phone") {
+		padding-right: 0;
 	}
 }
 
@@ -193,11 +219,24 @@
 	width: 259px;
 	height: 30px;
 	padding-left: 9px;
+	padding-right: 25px;
 	border: none;
 	border-radius: 5px;
 
+	@include media("<=desktop") {
+		width: 180px;
+	}
+
+	@include media("<=tablet") {
+		width: 130px;
+	}
+
+	@include media("<=phone") {
+		width: 259px;
+	}
+
 	@include media("<=sm-phone") {
-		width: 150px;
+		width: 120px;
 	}
 
 	&::placeholder {
@@ -232,6 +271,10 @@
 
 	color: #555;
 	@include hover(color, #aaa);
+
+	@include media("<=tablet") {
+		font-size: 16px;
+	}
 
 	@include media("<=sm-phone") {
 		font-size: 16px;

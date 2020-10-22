@@ -16,6 +16,10 @@
 		color: $white;
 		font-weight: 400;
 		text-align: center;
+
+		@include media("<=sm-phone") {
+			font-size: 22px;
+		}
 	}
 
 	&-form {

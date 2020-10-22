@@ -19,8 +19,8 @@
 .picture {
 
 	&-small {
-		@include size(80px);
-
+		@include size(95px);
+		padding: 8px;
 		margin-bottom: 8px;
 
 		border: 1px solid #b7b7b7;

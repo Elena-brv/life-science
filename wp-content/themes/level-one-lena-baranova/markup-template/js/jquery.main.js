@@ -134,12 +134,12 @@ function selectPrice() {
 }
 
 function showHidePromos() {
-	$('.promos').mouseover(function() {
-		$('.actions').css('display', 'grid');
-	})
-
-	$('.promos').mouseout(function() {
-		$('.actions').css('display', 'none');
+	$('.promos').click(function() {
+		if ($('.actions').css('display') === 'none') {
+			$('.actions').css('display', 'grid');
+		} else {
+			$('.actions').css('display', 'none');
+		}
 	})
 }
 
@@ -154,6 +154,8 @@ function showHidePromos() {
 // library smartmenus (if you dont have menu in the project - just remove)
 //= vendors/smartmenus.js
 //= vendors/slick.min.js
+//= vendors/jquery.fancybox.min.js
+
 //-------- -------- -------- --------
 //-------- included js libs end
 //-------- -------- -------- --------
